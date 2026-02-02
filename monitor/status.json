@@ -1,2245 +1,1373 @@
 {
   "_meta": {
-    "generatedAt": "2026-02-01T13:15:18.003Z",
+    "generatedAt": "2026-02-02T02:48:40.567Z",
     "totalDomains": 433,
-    "online": 279,
-    "offline": 154,
-    "withSSL": 256,
-    "avgResponseTime": 5442,
-    "checkDuration": "1091.2s"
+    "online": 170,
+    "offline": 263,
+    "withSSL": 160,
+    "avgResponseTime": 4528,
+    "checkDuration": "947.7s"
   },
   "domains": [
-    {
-      "domain": "abae.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 5582,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:08:47.362Z"
-    },
     {
       "domain": "acav.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 1396,
+      "responseTime": 784,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:00.807Z"
-    },
-    {
-      "domain": "agn.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 6251,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:09:10.246Z"
+      "checkedAt": "2026-02-02T02:39:33.835Z"
     },
     {
       "domain": "aguasdeyaracuy.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 663,
+      "responseTime": 797,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:24.543Z"
+      "checkedAt": "2026-02-02T02:41:05.085Z"
     },
     {
       "domain": "alcaldiabaruta.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2351,
+      "responseTime": 631,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:52.261Z"
+      "checkedAt": "2026-02-02T02:35:04.154Z"
     },
     {
       "domain": "alcaldiacaroni.gob.ve",
       "status": "online",
       "httpCode": 302,
-      "responseTime": 1594,
+      "responseTime": 5065,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:00.521Z"
+      "checkedAt": "2026-02-02T02:35:12.996Z"
     },
     {
       "domain": "alcaldiadeatures.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 6547,
+      "responseTime": 1791,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:03:23.633Z"
-    },
-    {
-      "domain": "alcaldiadecolon.gob.ve",
-      "status": "online",
-      "httpCode": 302,
-      "responseTime": 12229,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:16.950Z"
-    },
-    {
-      "domain": "alcaldiadeguacara.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 4991,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:55.060Z"
+      "checkedAt": "2026-02-02T02:38:55.724Z"
     },
     {
       "domain": "alcaldiadeguaicaipuro.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 3259,
+      "responseTime": 2283,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:58.860Z"
+      "checkedAt": "2026-02-02T02:41:42.753Z"
     },
     {
       "domain": "alcaldiadeguarenas.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 4942,
+      "responseTime": 4816,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:11.792Z"
-    },
-    {
-      "domain": "alcaldiadeheres.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 5267,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:55.336Z"
+      "checkedAt": "2026-02-02T02:32:57.706Z"
     },
     {
       "domain": "alcaldiadeindependencia.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1641,
+      "responseTime": 6453,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:02:41.961Z"
-    },
-    {
-      "domain": "alcaldiademara.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 7500,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:06:35.622Z"
+      "checkedAt": "2026-02-02T02:38:13.780Z"
     },
     {
       "domain": "alcaldiademiranda.gob.ve",
       "status": "online",
       "httpCode": 403,
-      "responseTime": 2933,
+      "responseTime": 6055,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:01.863Z"
+      "checkedAt": "2026-02-02T02:35:13.989Z"
     },
     {
       "domain": "alcaldiadenaguanagua.gob.ve",
       "status": "online",
       "httpCode": 403,
-      "responseTime": 5537,
+      "responseTime": 1308,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:49.105Z"
+      "checkedAt": "2026-02-02T02:34:03.770Z"
     },
     {
       "domain": "alcaldiadenirgua.gob.ve",
       "status": "online",
       "httpCode": 503,
-      "responseTime": 8274,
+      "responseTime": 3751,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:03:25.360Z"
-    },
-    {
-      "domain": "alcaldiadepalavecino.gob.ve",
-      "status": "online",
-      "httpCode": 526,
-      "responseTime": 11258,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:08:38.037Z"
+      "checkedAt": "2026-02-02T02:38:57.685Z"
     },
     {
       "domain": "alcaldiaderoscio.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 3343,
+      "responseTime": 3510,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:10.194Z"
+      "checkedAt": "2026-02-02T02:32:56.400Z"
     },
     {
       "domain": "alcaldiadesanfelipe.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 69,
+      "responseTime": 337,
       "ssl": false,
-      "checkedAt": "2026-02-01T12:59:35.706Z"
+      "checkedAt": "2026-02-02T02:34:51.711Z"
     },
     {
       "domain": "alcaldiadevalencia.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 4761,
+      "responseTime": 4400,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:06:00.361Z"
-    },
-    {
-      "domain": "alcaldiadezamora.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 1165,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:51.234Z"
-    },
-    {
-      "domain": "alcaldiagirardot.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 3428,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:08.146Z"
+      "checkedAt": "2026-02-02T02:41:44.868Z"
     },
     {
       "domain": "alcaldiaguanare.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 11907,
+      "responseTime": 14117,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:11.322Z"
+      "checkedAt": "2026-02-02T02:39:47.172Z"
     },
     {
       "domain": "alcaldialibertador-carabobo.gob.ve",
       "status": "online",
       "httpCode": 302,
-      "responseTime": 497,
+      "responseTime": 671,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:56.095Z"
+      "checkedAt": "2026-02-02T02:41:41.138Z"
     },
     {
       "domain": "alcaldialossalias.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 238,
+      "responseTime": 6072,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:06:28.355Z"
-    },
-    {
-      "domain": "alcaldiamunicipiosucre.gob.ve",
-      "status": "online",
-      "httpCode": 302,
-      "responseTime": 5559,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:55.630Z"
-    },
-    {
-      "domain": "alcaldiapaez.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 11956,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:16.676Z"
+      "checkedAt": "2026-02-02T02:42:16.548Z"
     },
     {
       "domain": "alcaldiasancristobal.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1483,
+      "responseTime": 1224,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:40.657Z"
+      "checkedAt": "2026-02-02T02:32:58.935Z"
     },
     {
       "domain": "alcaldiasanfrancisco.gob.ve",
       "status": "online",
       "httpCode": 403,
-      "responseTime": 5200,
+      "responseTime": 1007,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:48.767Z"
-    },
-    {
-      "domain": "alcaldiasimonbolivar.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 7317,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:06:35.439Z"
+      "checkedAt": "2026-02-02T02:34:03.469Z"
     },
     {
       "domain": "almccs.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 14662,
+      "responseTime": 10914,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:02:05.728Z"
-    },
-    {
-      "domain": "amazonas.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 3292,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:14:41.763Z"
+      "checkedAt": "2026-02-02T02:37:24.725Z"
     },
     {
       "domain": "antimonopolio.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 15258,
+      "responseTime": 8515,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:02:06.323Z"
-    },
-    {
-      "domain": "anzoategui.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 4625,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:09:08.622Z"
+      "checkedAt": "2026-02-02T02:37:22.325Z"
     },
     {
       "domain": "apn.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2175,
+      "responseTime": 1298,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:01:15.991Z"
-    },
-    {
-      "domain": "apure.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 6675,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:14:03.434Z"
+      "checkedAt": "2026-02-02T02:36:38.577Z"
     },
     {
       "domain": "araguena.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1033,
+      "responseTime": 773,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:50.946Z"
+      "checkedAt": "2026-02-02T02:35:04.299Z"
     },
     {
       "domain": "archivodellibertador.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1181,
+      "responseTime": 4859,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:25.060Z"
-    },
-    {
-      "domain": "austria.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 1764,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:13.308Z"
+      "checkedAt": "2026-02-02T02:41:09.146Z"
     },
     {
       "domain": "avp.gob.ve",
       "status": "online",
       "httpCode": 302,
-      "responseTime": 7328,
+      "responseTime": 9753,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:01:21.151Z"
+      "checkedAt": "2026-02-02T02:36:47.037Z"
     },
     {
       "domain": "baer.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 3337,
+      "responseTime": 5954,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:27.219Z"
-    },
-    {
-      "domain": "bandes.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 1102,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:13:06.356Z"
-    },
-    {
-      "domain": "banmujer.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 12737,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:11:15.719Z"
-    },
-    {
-      "domain": "bolipuertos.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 11791,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:16.510Z"
+      "checkedAt": "2026-02-02T02:41:10.245Z"
     },
     {
       "domain": "bomberosdeamazonas.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1351,
+      "responseTime": 1034,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:43.182Z"
-    },
-    {
-      "domain": "bomberosmerida.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 1547,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:11:32.785Z"
+      "checkedAt": "2026-02-02T02:40:22.431Z"
     },
     {
       "domain": "bpvb.gob.ve",
       "status": "online",
       "httpCode": 503,
-      "responseTime": 6289,
+      "responseTime": 9099,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:30.172Z"
+      "checkedAt": "2026-02-02T02:41:13.391Z"
     },
     {
       "domain": "bustaguanes.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 13830,
+      "responseTime": 6848,
       "ssl": false,
-      "checkedAt": "2026-02-01T13:02:20.039Z"
+      "checkedAt": "2026-02-02T02:37:35.873Z"
     },
     {
       "domain": "cabelum.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1492,
+      "responseTime": 8121,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:06:29.612Z"
-    },
-    {
-      "domain": "cass.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 4235,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:14:42.706Z"
+      "checkedAt": "2026-02-02T02:42:18.599Z"
     },
     {
       "domain": "cebm.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 1764,
+      "responseTime": 1109,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:01.174Z"
+      "checkedAt": "2026-02-02T02:39:34.159Z"
     },
     {
       "domain": "cedocabar.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 891,
+      "responseTime": 6596,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:06:29.009Z"
-    },
-    {
-      "domain": "cenal.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 10596,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:12:28.491Z"
-    },
-    {
-      "domain": "cendis.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 2805,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:09:06.801Z"
-    },
-    {
-      "domain": "cenditel.gob.ve",
-      "status": "online",
-      "httpCode": 302,
-      "responseTime": 2309,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:09:43.427Z"
+      "checkedAt": "2026-02-02T02:42:17.073Z"
     },
     {
       "domain": "cenipa.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 6986,
+      "responseTime": 7064,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:46.161Z"
-    },
-    {
-      "domain": "cgesucre.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 9772,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:09:14.128Z"
-    },
-    {
-      "domain": "cgr.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 10088,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:12:27.985Z"
+      "checkedAt": "2026-02-02T02:33:04.775Z"
     },
     {
       "domain": "chacao.gob.ve",
       "status": "online",
       "httpCode": 403,
-      "responseTime": 2112,
+      "responseTime": 9491,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:25.997Z"
-    },
-    {
-      "domain": "ciara.gob.ve",
-      "status": "online",
-      "httpCode": 404,
-      "responseTime": 7209,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:09:14.533Z"
+      "checkedAt": "2026-02-02T02:41:13.784Z"
     },
     {
       "domain": "cicpc.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1745,
+      "responseTime": 8036,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:06:29.866Z"
+      "checkedAt": "2026-02-02T02:42:18.515Z"
     },
     {
       "domain": "cida.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 1249,
+      "responseTime": 7406,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:06:29.368Z"
+      "checkedAt": "2026-02-02T02:42:17.883Z"
     },
     {
       "domain": "cidata.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1248,
+      "responseTime": 1156,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:08.032Z"
-    },
-    {
-      "domain": "ciepe.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 12617,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:13:32.877Z"
+      "checkedAt": "2026-02-02T02:32:53.984Z"
     },
     {
       "domain": "cmao.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 6731,
+      "responseTime": 5457,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:20.306Z"
+      "checkedAt": "2026-02-02T02:34:36.331Z"
     },
     {
       "domain": "cmb.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 11348,
+      "responseTime": 7329,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:53.180Z"
+      "checkedAt": "2026-02-02T02:40:28.727Z"
     },
     {
       "domain": "cmbnaguanagua.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 5679,
+      "responseTime": 5804,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:49.244Z"
+      "checkedAt": "2026-02-02T02:34:08.262Z"
     },
     {
       "domain": "cmcarvajal.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 2259,
+      "responseTime": 5403,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:34.553Z"
-    },
-    {
-      "domain": "cmchacao.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 2284,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:11:33.522Z"
-    },
-    {
-      "domain": "cmldc.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 12503,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:13:17.761Z"
+      "checkedAt": "2026-02-02T02:35:53.637Z"
     },
     {
       "domain": "cneh.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 4938,
+      "responseTime": 7780,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:37.233Z"
-    },
-    {
-      "domain": "cnti.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 4507,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:14:42.978Z"
-    },
-    {
-      "domain": "cntq.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 7370,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:18.920Z"
+      "checkedAt": "2026-02-02T02:35:56.016Z"
     },
     {
       "domain": "cnu.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2074,
+      "responseTime": 1734,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:12.949Z"
+      "checkedAt": "2026-02-02T02:33:30.989Z"
     },
     {
       "domain": "comex.gob.ve",
       "status": "online",
       "httpCode": 307,
-      "responseTime": 2650,
+      "responseTime": 2568,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:09.508Z"
+      "checkedAt": "2026-02-02T02:32:55.466Z"
     },
     {
       "domain": "comisionpresidencialucv.gob.ve",
       "status": "online",
       "httpCode": 403,
-      "responseTime": 7355,
+      "responseTime": 7227,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:18.234Z"
-    },
-    {
-      "domain": "conalot.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 9999,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:09:13.998Z"
-    },
-    {
-      "domain": "conapdis.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 2124,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:09:43.585Z"
-    },
-    {
-      "domain": "conatel.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 6318,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:17.866Z"
+      "checkedAt": "2026-02-02T02:33:36.485Z"
     },
     {
       "domain": "concejolossalias.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1362,
+      "responseTime": 1563,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:12.238Z"
+      "checkedAt": "2026-02-02T02:33:30.818Z"
     },
     {
       "domain": "concejomunicipalelhatillo.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 5558,
+      "responseTime": 11117,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:02:45.879Z"
+      "checkedAt": "2026-02-02T02:38:18.445Z"
     },
     {
       "domain": "concejomunicipiolostaques.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 12631,
+      "responseTime": 7425,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:56.201Z"
+      "checkedAt": "2026-02-02T02:34:09.888Z"
     },
     {
       "domain": "consejoderechoshumanos.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 3438,
+      "responseTime": 8711,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:02:43.758Z"
+      "checkedAt": "2026-02-02T02:38:16.038Z"
     },
     {
       "domain": "consejolegislativolara.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 3082,
+      "responseTime": 2895,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:42.255Z"
+      "checkedAt": "2026-02-02T02:33:00.606Z"
     },
     {
       "domain": "consuladobarcelona.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 888,
+      "responseTime": 967,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:42.717Z"
+      "checkedAt": "2026-02-02T02:40:22.363Z"
     },
     {
       "domain": "contraloria-apure.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1129,
+      "responseTime": 818,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:56.725Z"
-    },
-    {
-      "domain": "contraloriadebarquisimeto.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 13235,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:11:16.217Z"
+      "checkedAt": "2026-02-02T02:41:41.284Z"
     },
     {
       "domain": "contraloriadecarirubana.gob.ve",
       "status": "online",
       "httpCode": 403,
-      "responseTime": 1150,
+      "responseTime": 1014,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:40.324Z"
+      "checkedAt": "2026-02-02T02:32:58.723Z"
     },
     {
       "domain": "contraloriadecojedes.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 860,
+      "responseTime": 6680,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:42.690Z"
-    },
-    {
-      "domain": "contraloriademaracaibo.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 10924,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:58.904Z"
-    },
-    {
-      "domain": "contraloriadevalera.gob.ve",
-      "status": "online",
-      "httpCode": 302,
-      "responseTime": 10923,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:07:30.645Z"
+      "checkedAt": "2026-02-02T02:40:28.076Z"
     },
     {
       "domain": "contraloriaestadoamazonas.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1772,
+      "responseTime": 1486,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:57.372Z"
+      "checkedAt": "2026-02-02T02:41:41.955Z"
     },
     {
       "domain": "contraloriaestadobarinas.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1336,
+      "responseTime": 1189,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:56.935Z"
+      "checkedAt": "2026-02-02T02:41:41.656Z"
     },
     {
       "domain": "contraloriaestadomerida.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1318,
+      "responseTime": 5486,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:25.201Z"
-    },
-    {
-      "domain": "contraloriaestadozulia.gob.ve",
-      "status": "online",
-      "httpCode": 302,
-      "responseTime": 12718,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:06:08.320Z"
+      "checkedAt": "2026-02-02T02:41:09.777Z"
     },
     {
       "domain": "contraloriagirardot-aragua.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2424,
+      "responseTime": 10605,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:26.308Z"
-    },
-    {
-      "domain": "contraloriamonagas.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 1762,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:49.740Z"
+      "checkedAt": "2026-02-02T02:41:14.897Z"
     },
     {
       "domain": "contraloriamunicipaldeheres-bolivar.gob.ve",
       "status": "online",
       "httpCode": 302,
-      "responseTime": 12643,
+      "responseTime": 11426,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:01:26.465Z"
+      "checkedAt": "2026-02-02T02:36:48.710Z"
     },
     {
       "domain": "contraloriamunicipaldepiar.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1372,
+      "responseTime": 1348,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:25.253Z"
-    },
-    {
-      "domain": "contraloriarosariodeperija.gob.ve",
-      "status": "online",
-      "httpCode": 403,
-      "responseTime": 5648,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:03:22.734Z"
+      "checkedAt": "2026-02-02T02:41:05.637Z"
     },
     {
       "domain": "corpesca.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 4109,
+      "responseTime": 4071,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:43.285Z"
-    },
-    {
-      "domain": "corpocentro.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 3619,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:14:42.087Z"
+      "checkedAt": "2026-02-02T02:33:01.784Z"
     },
     {
       "domain": "corpoez.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2329,
+      "responseTime": 1464,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:01.256Z"
-    },
-    {
-      "domain": "corposaludtachira.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 7248,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:57.316Z"
+      "checkedAt": "2026-02-02T02:35:09.396Z"
     },
     {
       "domain": "corposaludyaracuy.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 37,
+      "responseTime": 127,
       "ssl": false,
-      "checkedAt": "2026-02-01T13:00:15.288Z"
-    },
-    {
-      "domain": "corpotulipa.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 403,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:14:38.869Z"
-    },
-    {
-      "domain": "correodelorinoco.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 2002,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:06.719Z"
+      "checkedAt": "2026-02-02T02:35:24.158Z"
     },
     {
       "domain": "corselca.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 15107,
+      "responseTime": 7151,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:58.678Z"
+      "checkedAt": "2026-02-02T02:34:09.615Z"
     },
     {
       "domain": "cronistadecaracas.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1553,
+      "responseTime": 1343,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:08.405Z"
+      "checkedAt": "2026-02-02T02:32:54.234Z"
     },
     {
-      "domain": "cvg.gob.ve",
+      "domain": "cuspal.gob.ve",
       "status": "online",
-      "httpCode": 200,
-      "responseTime": 15343,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:06:10.945Z"
-    },
-    {
-      "domain": "defensapublica.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 4149,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:11:35.389Z"
+      "httpCode": 302,
+      "responseTime": 4078,
+      "ssl": false,
+      "checkedAt": "2026-02-02T02:36:47.017Z"
     },
     {
       "domain": "desarrollominero.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 1790,
+      "responseTime": 5077,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:01:15.608Z"
+      "checkedAt": "2026-02-02T02:36:42.357Z"
     },
     {
       "domain": "dgnb.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2182,
+      "responseTime": 1924,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:09.037Z"
+      "checkedAt": "2026-02-02T02:32:54.818Z"
+    },
+    {
+      "domain": "e-bolivar.gob.ve",
+      "status": "online",
+      "httpCode": 200,
+      "responseTime": 7235,
+      "ssl": true,
+      "checkedAt": "2026-02-02T02:40:28.633Z"
     },
     {
       "domain": "edosucre.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 10049,
+      "responseTime": 3414,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:03:27.137Z"
+      "checkedAt": "2026-02-02T02:38:57.350Z"
     },
     {
       "domain": "emprenderjuntos.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1207,
+      "responseTime": 634,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:14.781Z"
+      "checkedAt": "2026-02-02T02:34:31.506Z"
     },
     {
       "domain": "emvepro.gob.ve",
       "status": "online",
       "httpCode": 302,
-      "responseTime": 5954,
+      "responseTime": 1376,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:49.522Z"
+      "checkedAt": "2026-02-02T02:34:03.837Z"
     },
     {
       "domain": "enpi.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2458,
+      "responseTime": 2076,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:09.315Z"
+      "checkedAt": "2026-02-02T02:32:54.973Z"
     },
     {
       "domain": "espromedbio.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 3109,
+      "responseTime": 11071,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:02:43.430Z"
-    },
-    {
-      "domain": "falcon.gob.ve",
-      "status": "online",
-      "httpCode": 302,
-      "responseTime": 5218,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:16.764Z"
+      "checkedAt": "2026-02-02T02:38:18.399Z"
     },
     {
       "domain": "fasmee.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 7842,
+      "responseTime": 6788,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:18.720Z"
+      "checkedAt": "2026-02-02T02:33:36.045Z"
     },
     {
       "domain": "femsur.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 6845,
+      "responseTime": 6620,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:17.723Z"
-    },
-    {
-      "domain": "fevp.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 5802,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:08:32.579Z"
-    },
-    {
-      "domain": "fidetel.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 2404,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:13:59.162Z"
+      "checkedAt": "2026-02-02T02:33:35.877Z"
     },
     {
       "domain": "flnh.gob.ve",
       "status": "online",
       "httpCode": 302,
-      "responseTime": 5984,
+      "responseTime": 1471,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:19.560Z"
+      "checkedAt": "2026-02-02T02:34:32.346Z"
     },
     {
       "domain": "fnp.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1061,
+      "responseTime": 780,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:01:52.120Z"
-    },
-    {
-      "domain": "fogade.gob.ve",
-      "status": "online",
-      "httpCode": 403,
-      "responseTime": 8118,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:14:04.877Z"
-    },
-    {
-      "domain": "fona.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 1891,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:06.606Z"
-    },
-    {
-      "domain": "fonacit.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 15298,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:11:46.540Z"
+      "checkedAt": "2026-02-02T02:37:14.585Z"
     },
     {
       "domain": "fonaem.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 11141,
+      "responseTime": 6398,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:22.017Z"
+      "checkedAt": "2026-02-02T02:33:35.653Z"
     },
     {
       "domain": "fonbe.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 11970,
+      "responseTime": 8055,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:53.803Z"
-    },
-    {
-      "domain": "fondemi.gob.ve",
-      "status": "online",
-      "httpCode": 307,
-      "responseTime": 7544,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:14:19.305Z"
+      "checkedAt": "2026-02-02T02:40:29.454Z"
     },
     {
       "domain": "fondoefa.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2493,
+      "responseTime": 2813,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:26.372Z"
+      "checkedAt": "2026-02-02T02:41:07.101Z"
     },
     {
       "domain": "fondoin.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 1512,
+      "responseTime": 5055,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:25.395Z"
-    },
-    {
-      "domain": "fundacite-amazonas.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 13395,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:11:16.378Z"
-    },
-    {
-      "domain": "fundacite-falcon.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 6447,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:54.426Z"
+      "checkedAt": "2026-02-02T02:41:09.345Z"
     },
     {
       "domain": "fundacite.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 5499,
+      "responseTime": 1088,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:55.412Z"
-    },
-    {
-      "domain": "fundadeporte.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 2023,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:12:19.916Z"
-    },
-    {
-      "domain": "fundapatrimonio.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 6831,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:54.811Z"
-    },
-    {
-      "domain": "fundarte.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 793,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:13:57.550Z"
+      "checkedAt": "2026-02-02T02:35:04.613Z"
     },
     {
       "domain": "fundavene.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2252,
+      "responseTime": 6777,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:02:42.572Z"
-    },
-    {
-      "domain": "fundayacucho.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 1362,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:13:58.119Z"
-    },
-    {
-      "domain": "fundelec.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 848,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:09:51.711Z"
-    },
-    {
-      "domain": "fundesta.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 8558,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:06:36.680Z"
+      "checkedAt": "2026-02-02T02:38:14.103Z"
     },
     {
       "domain": "funvi.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 11390,
+      "responseTime": 10944,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:10.316Z"
+      "checkedAt": "2026-02-02T02:35:18.874Z"
     },
     {
       "domain": "futurafm.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 4947,
+      "responseTime": 1012,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:18.523Z"
+      "checkedAt": "2026-02-02T02:34:31.886Z"
     },
     {
       "domain": "gacetaoficial.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 7560,
+      "responseTime": 513,
       "ssl": false,
-      "checkedAt": "2026-02-01T13:04:27.103Z"
+      "checkedAt": "2026-02-02T02:39:53.508Z"
     },
     {
       "domain": "gaslara.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2919,
+      "responseTime": 1942,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:52.833Z"
+      "checkedAt": "2026-02-02T02:35:05.469Z"
     },
     {
       "domain": "gobernaciondelzulia.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 10430,
+      "responseTime": 5973,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:53.999Z"
+      "checkedAt": "2026-02-02T02:34:08.435Z"
     },
     {
       "domain": "granmisionvueltaalapatria.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2918,
+      "responseTime": 3412,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:09.774Z"
-    },
-    {
-      "domain": "guarico.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 12009,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:16.728Z"
+      "checkedAt": "2026-02-02T02:32:56.307Z"
     },
     {
       "domain": "hcudamp.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 918,
+      "responseTime": 995,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:02:41.235Z"
+      "checkedAt": "2026-02-02T02:38:08.319Z"
     },
     {
       "domain": "hidroandes.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 4839,
+      "responseTime": 7577,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:01:55.902Z"
-    },
-    {
-      "domain": "hidrocapital.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 12065,
-      "ssl": true,
-      "checkedAt": "2026-02-01T12:59:25.646Z"
-    },
-    {
-      "domain": "hidrocaribe.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 1507,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:11:32.744Z"
+      "checkedAt": "2026-02-02T02:37:21.386Z"
     },
     {
       "domain": "hidrolago.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 11431,
+      "responseTime": 11524,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:22.306Z"
-    },
-    {
-      "domain": "hidrolara.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 7672,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:09:43.026Z"
-    },
-    {
-      "domain": "hidropaez.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 468,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:08:27.243Z"
-    },
-    {
-      "domain": "hidrosuroeste.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 5825,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:17.372Z"
-    },
-    {
-      "domain": "hidroven.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 9875,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:12:42.425Z"
+      "checkedAt": "2026-02-02T02:33:40.778Z"
     },
     {
       "domain": "hogaresdelapatria.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 4179,
+      "responseTime": 565,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:03:21.262Z"
-    },
-    {
-      "domain": "iactp.gob.ve",
-      "status": "online",
-      "httpCode": 302,
-      "responseTime": 4160,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:11:35.400Z"
+      "checkedAt": "2026-02-02T02:38:54.496Z"
     },
     {
       "domain": "iaefalcon.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2164,
+      "responseTime": 2245,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:01.093Z"
+      "checkedAt": "2026-02-02T02:35:10.178Z"
     },
     {
       "domain": "iamib.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 733,
+      "responseTime": 1109,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:00.144Z"
+      "checkedAt": "2026-02-02T02:39:34.161Z"
     },
     {
       "domain": "icopetro.gob.ve",
       "status": "online",
       "httpCode": 520,
-      "responseTime": 3704,
+      "responseTime": 6557,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:02.635Z"
-    },
-    {
-      "domain": "idea.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 11530,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:13:16.787Z"
+      "checkedAt": "2026-02-02T02:35:14.492Z"
     },
     {
       "domain": "idenna.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 12766,
+      "responseTime": 14365,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:54.600Z"
-    },
-    {
-      "domain": "igvsb.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 10297,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:13:15.552Z"
+      "checkedAt": "2026-02-02T02:40:35.765Z"
     },
     {
       "domain": "ima.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1723,
+      "responseTime": 1219,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:57.323Z"
-    },
-    {
-      "domain": "inac.gob.ve",
-      "status": "online",
-      "httpCode": 403,
-      "responseTime": 3962,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:15.508Z"
-    },
-    {
-      "domain": "inamujer.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 5367,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:13:10.623Z"
-    },
-    {
-      "domain": "inces.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 9727,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:09:13.725Z"
-    },
-    {
-      "domain": "incret.gob.ve",
-      "status": "online",
-      "httpCode": 302,
-      "responseTime": 5636,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:08:32.414Z"
+      "checkedAt": "2026-02-02T02:41:41.688Z"
     },
     {
       "domain": "industrias.gob.ve",
       "status": "online",
       "httpCode": 403,
-      "responseTime": 1544,
+      "responseTime": 880,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:43.374Z"
-    },
-    {
-      "domain": "ine.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 7098,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:13:12.354Z"
-    },
-    {
-      "domain": "infocentro.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 4844,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:14:43.316Z"
-    },
-    {
-      "domain": "inh.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 7606,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:12:25.501Z"
-    },
-    {
-      "domain": "inhrr.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 1267,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:13:58.023Z"
+      "checkedAt": "2026-02-02T02:40:22.277Z"
     },
     {
       "domain": "inidi.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 3519,
+      "responseTime": 2419,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:53.434Z"
-    },
-    {
-      "domain": "inparques.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 771,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:14:39.239Z"
+      "checkedAt": "2026-02-02T02:35:05.947Z"
     },
     {
       "domain": "inpsaseletica.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 2673,
+      "responseTime": 2647,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:09.532Z"
-    },
-    {
-      "domain": "insalud.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 6748,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:09:42.099Z"
+      "checkedAt": "2026-02-02T02:32:55.545Z"
     },
     {
       "domain": "insemat.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 3997,
+      "responseTime": 6013,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:36.292Z"
-    },
-    {
-      "domain": "insopesca.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 12256,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:08:39.036Z"
-    },
-    {
-      "domain": "inti.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 5593,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:53.570Z"
-    },
-    {
-      "domain": "ipasme.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 15224,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:14:13.187Z"
-    },
-    {
-      "domain": "ipsfa.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 9831,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:06:37.951Z"
+      "checkedAt": "2026-02-02T02:35:54.249Z"
     },
     {
       "domain": "ispeb.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1981,
+      "responseTime": 5314,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:34.273Z"
-    },
-    {
-      "domain": "ivic.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 6250,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:56.321Z"
+      "checkedAt": "2026-02-02T02:35:53.547Z"
     },
     {
       "domain": "ivpa.gob.ve",
       "status": "online",
       "httpCode": 302,
-      "responseTime": 2054,
+      "responseTime": 5181,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:01:15.873Z"
+      "checkedAt": "2026-02-02T02:36:42.461Z"
     },
     {
       "domain": "juventudydeporte.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 7121,
+      "responseTime": 6883,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:01:20.942Z"
-    },
-    {
-      "domain": "lara.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 1549,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:13:58.307Z"
+      "checkedAt": "2026-02-02T02:36:44.167Z"
     },
     {
       "domain": "lecheria.gob.ve",
       "status": "online",
       "httpCode": 404,
-      "responseTime": 2922,
+      "responseTime": 1625,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:52.837Z"
+      "checkedAt": "2026-02-02T02:35:05.152Z"
     },
     {
       "domain": "loteriadecaracas.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 971,
+      "responseTime": 925,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:44.537Z"
+      "checkedAt": "2026-02-02T02:34:03.384Z"
     },
     {
       "domain": "maracaibo.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 966,
+      "responseTime": 4836,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:33.258Z"
+      "checkedAt": "2026-02-02T02:35:53.069Z"
     },
     {
       "domain": "masciencia.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 8340,
+      "responseTime": 3152,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:15.199Z"
+      "checkedAt": "2026-02-02T02:32:56.051Z"
     },
     {
       "domain": "minaamp.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1115,
+      "responseTime": 928,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:40.287Z"
+      "checkedAt": "2026-02-02T02:32:58.637Z"
     },
     {
       "domain": "minagricultura.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 4013,
+      "responseTime": 4643,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:36.303Z"
+      "checkedAt": "2026-02-02T02:35:52.874Z"
     },
     {
       "domain": "minaguas.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2445,
+      "responseTime": 1828,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:01.373Z"
+      "checkedAt": "2026-02-02T02:35:09.760Z"
+    },
+    {
+      "domain": "mincoex.gob.ve",
+      "status": "online",
+      "httpCode": 200,
+      "responseTime": 2995,
+      "ssl": true,
+      "checkedAt": "2026-02-02T02:32:55.891Z"
     },
     {
       "domain": "mincomercionacional.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1236,
+      "responseTime": 563,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:00.161Z"
+      "checkedAt": "2026-02-02T02:35:08.492Z"
+    },
+    {
+      "domain": "mincultura.gob.ve",
+      "status": "online",
+      "httpCode": 301,
+      "responseTime": 9641,
+      "ssl": true,
+      "checkedAt": "2026-02-02T02:41:13.934Z"
     },
     {
       "domain": "mincyt.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 9007,
+      "responseTime": 3284,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:58.924Z"
-    },
-    {
-      "domain": "mindefensa.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 11648,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:14:08.408Z"
-    },
-    {
-      "domain": "mindeporte.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 5913,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:55.983Z"
-    },
-    {
-      "domain": "minmujer.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 10731,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:07:30.453Z"
+      "checkedAt": "2026-02-02T02:35:06.814Z"
     },
     {
       "domain": "minpesca.gob.ve",
       "status": "online",
-      "httpCode": 200,
-      "responseTime": 3816,
+      "httpCode": 503,
+      "responseTime": 5831,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:02.745Z"
-    },
-    {
-      "domain": "minpi.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 7782,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:09:43.134Z"
+      "checkedAt": "2026-02-02T02:35:13.764Z"
     },
     {
       "domain": "mippci.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2055,
+      "responseTime": 2359,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:01.467Z"
-    },
-    {
-      "domain": "miranda-carabobo.gob.ve",
-      "status": "online",
-      "httpCode": 404,
-      "responseTime": 1668,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:12:19.560Z"
+      "checkedAt": "2026-02-02T02:39:35.412Z"
     },
     {
       "domain": "misionpiar.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 884,
+      "responseTime": 669,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:11.759Z"
-    },
-    {
-      "domain": "mppee.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 13952,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:06:42.073Z"
-    },
-    {
-      "domain": "mppef.gob.ve",
-      "status": "online",
-      "httpCode": 404,
-      "responseTime": 5851,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:08:32.628Z"
-    },
-    {
-      "domain": "mppeu.gob.ve",
-      "status": "online",
-      "httpCode": 403,
-      "responseTime": 5583,
-      "ssl": false,
-      "checkedAt": "2026-02-01T13:06:13.905Z"
+      "checkedAt": "2026-02-02T02:33:29.922Z"
     },
     {
       "domain": "mppop.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 6082,
+      "responseTime": 9449,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:01:19.901Z"
+      "checkedAt": "2026-02-02T02:36:46.730Z"
     },
     {
       "domain": "mppp.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 935,
+      "responseTime": 746,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:00.345Z"
+      "checkedAt": "2026-02-02T02:39:33.797Z"
     },
     {
       "domain": "mpppst.gob.ve",
       "status": "online",
       "httpCode": 400,
-      "responseTime": 7287,
+      "responseTime": 8234,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:03:30.266Z"
+      "checkedAt": "2026-02-02T02:39:03.233Z"
     },
     {
       "domain": "mpprijp.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1076,
+      "responseTime": 804,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:00.485Z"
-    },
-    {
-      "domain": "mpps.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 7415,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:09:42.768Z"
+      "checkedAt": "2026-02-02T02:39:33.853Z"
     },
     {
       "domain": "mppsp.gob.ve",
       "status": "online",
       "httpCode": 302,
-      "responseTime": 11651,
+      "responseTime": 8823,
       "ssl": false,
-      "checkedAt": "2026-02-01T13:05:08.484Z"
+      "checkedAt": "2026-02-02T02:40:45.223Z"
     },
     {
       "domain": "mppt.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 6498,
+      "responseTime": 5718,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:01:20.317Z"
+      "checkedAt": "2026-02-02T02:36:42.999Z"
     },
     {
       "domain": "nuevaepoca.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 3079,
+      "responseTime": 3427,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:42.254Z"
+      "checkedAt": "2026-02-02T02:33:01.140Z"
     },
     {
       "domain": "observatorio.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 6459,
+      "responseTime": 2562,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:20.036Z"
+      "checkedAt": "2026-02-02T02:34:33.438Z"
     },
     {
       "domain": "oncdoft.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 6346,
+      "responseTime": 5884,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:01:20.164Z"
-    },
-    {
-      "domain": "onuginebra.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 7069,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:09:42.423Z"
+      "checkedAt": "2026-02-02T02:36:43.163Z"
     },
     {
       "domain": "ovs.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 809,
+      "responseTime": 631,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:42.637Z"
+      "checkedAt": "2026-02-02T02:40:22.027Z"
     },
     {
       "domain": "parguaza.gob.ve",
       "status": "online",
       "httpCode": 303,
-      "responseTime": 8922,
+      "responseTime": 11781,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:19.802Z"
-    },
-    {
-      "domain": "pcivil.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 12999,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:13:18.256Z"
+      "checkedAt": "2026-02-02T02:33:41.040Z"
     },
     {
       "domain": "pdval.gob.ve",
       "status": "online",
       "httpCode": 302,
-      "responseTime": 2234,
+      "responseTime": 5622,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:57.835Z"
+      "checkedAt": "2026-02-02T02:41:46.091Z"
     },
     {
       "domain": "petrocasa.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 3210,
+      "responseTime": 1951,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:53.124Z"
-    },
-    {
-      "domain": "policiadearagua.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 12406,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:07:17.126Z"
+      "checkedAt": "2026-02-02T02:35:05.477Z"
     },
     {
       "domain": "polimara.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 8775,
+      "responseTime": 8875,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:01:22.595Z"
-    },
-    {
-      "domain": "portuguesa.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 2581,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:14:41.050Z"
+      "checkedAt": "2026-02-02T02:36:46.158Z"
     },
     {
       "domain": "prensapresidencialvenezuela.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1159,
+      "responseTime": 1763,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:00.083Z"
-    },
-    {
-      "domain": "presidencia.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 11816,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:08:38.595Z"
+      "checkedAt": "2026-02-02T02:35:09.692Z"
     },
     {
       "domain": "procuraduriaestadobarinas.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 1266,
+      "responseTime": 1347,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:40.438Z"
+      "checkedAt": "2026-02-02T02:32:59.057Z"
     },
     {
       "domain": "quimbiotec.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 1299,
+      "responseTime": 7288,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:06:29.418Z"
-    },
-    {
-      "domain": "reddearte.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 6958,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:18.506Z"
-    },
-    {
-      "domain": "redtv.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 10385,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:09:14.384Z"
+      "checkedAt": "2026-02-02T02:42:17.766Z"
     },
     {
       "domain": "respaldocomunal.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 5538,
+      "responseTime": 4307,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:49.104Z"
+      "checkedAt": "2026-02-02T02:34:06.767Z"
     },
     {
       "domain": "resquimc.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 11234,
+      "responseTime": 4006,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:03:28.323Z"
+      "checkedAt": "2026-02-02T02:38:57.943Z"
     },
     {
       "domain": "rnv.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 727,
+      "responseTime": 7270,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:06:28.846Z"
+      "checkedAt": "2026-02-02T02:42:17.748Z"
     },
     {
       "domain": "robertserra.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 826,
+      "responseTime": 1102,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:07.678Z"
-    },
-    {
-      "domain": "sabat.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 3375,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:11:34.614Z"
+      "checkedAt": "2026-02-02T02:32:53.994Z"
     },
     {
       "domain": "sabates.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 8304,
+      "responseTime": 7141,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:19.184Z"
+      "checkedAt": "2026-02-02T02:33:36.399Z"
     },
     {
       "domain": "safonapp.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 1746,
+      "responseTime": 10562,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:02:42.065Z"
-    },
-    {
-      "domain": "sahum.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 5415,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:11:36.654Z"
-    },
-    {
-      "domain": "saime.gob.ve",
-      "status": "online",
-      "httpCode": 502,
-      "responseTime": 6743,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:18.291Z"
+      "checkedAt": "2026-02-02T02:38:17.888Z"
     },
     {
       "domain": "samath.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1371,
+      "responseTime": 5777,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:02:41.689Z"
+      "checkedAt": "2026-02-02T02:38:13.102Z"
     },
     {
-      "domain": "sapi.gob.ve",
+      "domain": "sarep.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 3534,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:14:42.003Z"
+      "responseTime": 12578,
+      "ssl": false,
+      "checkedAt": "2026-02-02T02:37:11.710Z"
     },
     {
       "domain": "sateb.gob.ve",
       "status": "online",
       "httpCode": 302,
-      "responseTime": 6747,
+      "responseTime": 7275,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:06.161Z"
+      "checkedAt": "2026-02-02T02:39:40.329Z"
     },
     {
       "domain": "sedat.gob.ve",
       "status": "online",
       "httpCode": 403,
-      "responseTime": 2518,
+      "responseTime": 1308,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:52.434Z"
+      "checkedAt": "2026-02-02T02:35:04.835Z"
     },
     {
       "domain": "sedatebne.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1240,
+      "responseTime": 1396,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:08.093Z"
+      "checkedAt": "2026-02-02T02:32:54.288Z"
     },
     {
       "domain": "sedatez.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2413,
+      "responseTime": 2299,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:52.325Z"
+      "checkedAt": "2026-02-02T02:35:05.823Z"
     },
     {
       "domain": "sedemat.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 11948,
+      "responseTime": 14067,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:04:11.364Z"
+      "checkedAt": "2026-02-02T02:39:47.123Z"
     },
     {
       "domain": "sedematlagunillas.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 2310,
+      "responseTime": 820,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:52.222Z"
+      "checkedAt": "2026-02-02T02:35:04.346Z"
     },
     {
       "domain": "sigestel.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 7504,
+      "responseTime": 6930,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:58:18.382Z"
+      "checkedAt": "2026-02-02T02:33:36.188Z"
     },
     {
       "domain": "sna.gob.ve",
       "status": "online",
       "httpCode": 503,
-      "responseTime": 7249,
+      "responseTime": 3057,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:20.828Z"
-    },
-    {
-      "domain": "sogamic.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 8274,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:09:43.627Z"
+      "checkedAt": "2026-02-02T02:34:33.935Z"
     },
     {
       "domain": "solucioneshidraulicas.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 6226,
+      "responseTime": 1792,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:19.803Z"
+      "checkedAt": "2026-02-02T02:34:32.667Z"
     },
     {
       "domain": "sudeaseg.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 13023,
+      "responseTime": 10275,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:03:30.113Z"
-    },
-    {
-      "domain": "sudeban.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 16032,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:14:12.793Z"
+      "checkedAt": "2026-02-02T02:39:04.213Z"
     },
     {
       "domain": "sunad.gob.ve",
       "status": "online",
       "httpCode": 503,
-      "responseTime": 6724,
+      "responseTime": 2461,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:20.302Z"
+      "checkedAt": "2026-02-02T02:34:33.337Z"
     },
     {
       "domain": "sunaval.gob.ve",
       "status": "online",
       "httpCode": 403,
-      "responseTime": 1088,
+      "responseTime": 911,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:56.687Z"
+      "checkedAt": "2026-02-02T02:41:41.379Z"
     },
     {
       "domain": "sundde.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 9123,
+      "responseTime": 3278,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:03:26.210Z"
-    },
-    {
-      "domain": "telecom.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 1267,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:12.810Z"
+      "checkedAt": "2026-02-02T02:38:57.214Z"
     },
     {
       "domain": "tifm.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 10252,
+      "responseTime": 7559,
       "ssl": false,
-      "checkedAt": "2026-02-01T13:04:21.102Z"
+      "checkedAt": "2026-02-02T02:39:51.163Z"
     },
     {
       "domain": "tsj.gob.ve",
       "status": "online",
       "httpCode": 503,
-      "responseTime": 829,
+      "responseTime": 6437,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:06:28.947Z"
+      "checkedAt": "2026-02-02T02:42:16.913Z"
     },
     {
       "domain": "tubhelca.gob.ve",
       "status": "online",
       "httpCode": 403,
-      "responseTime": 4939,
+      "responseTime": 926,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:18.515Z"
+      "checkedAt": "2026-02-02T02:34:31.800Z"
+    },
+    {
+      "domain": "turmero.gob.ve",
+      "status": "online",
+      "httpCode": 200,
+      "responseTime": 11009,
+      "ssl": false,
+      "checkedAt": "2026-02-02T02:37:29.861Z"
     },
     {
       "domain": "tves.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 1357,
+      "responseTime": 1566,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:25.238Z"
+      "checkedAt": "2026-02-02T02:41:05.855Z"
     },
     {
       "domain": "ucs.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 352,
+      "responseTime": 191,
       "ssl": false,
-      "checkedAt": "2026-02-01T13:01:35.576Z"
-    },
-    {
-      "domain": "unif.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 14966,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:00:47.262Z"
+      "checkedAt": "2026-02-02T02:36:58.474Z"
     },
     {
       "domain": "ven911.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 11616,
+      "responseTime": 5939,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:02:51.935Z"
+      "checkedAt": "2026-02-02T02:38:13.264Z"
     },
     {
       "domain": "venezuelatoda.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 3510,
+      "responseTime": 3873,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:57:42.686Z"
+      "checkedAt": "2026-02-02T02:33:01.585Z"
     },
     {
       "domain": "vensalud.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1693,
+      "responseTime": 932,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:00:00.619Z"
-    },
-    {
-      "domain": "vicepresidencia.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 12610,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:08:39.390Z"
+      "checkedAt": "2026-02-02T02:35:08.862Z"
     },
     {
       "domain": "vit.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 1536,
+      "responseTime": 5984,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:25.418Z"
-    },
-    {
-      "domain": "vycsucre.gob.ve",
-      "status": "online",
-      "httpCode": 301,
-      "responseTime": 4508,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:10:16.054Z"
+      "checkedAt": "2026-02-02T02:41:10.274Z"
     },
     {
       "domain": "xvcenso.gob.ve",
       "status": "online",
       "httpCode": 200,
-      "responseTime": 4414,
+      "responseTime": 2864,
       "ssl": true,
-      "checkedAt": "2026-02-01T12:59:54.330Z"
-    },
-    {
-      "domain": "yaracuy.gob.ve",
-      "status": "online",
-      "httpCode": 200,
-      "responseTime": 2424,
-      "ssl": true,
-      "checkedAt": "2026-02-01T13:14:40.893Z"
+      "checkedAt": "2026-02-02T02:35:06.392Z"
     },
     {
       "domain": "zecarabobo.gob.ve",
       "status": "online",
       "httpCode": 301,
-      "responseTime": 260,
+      "responseTime": 404,
       "ssl": true,
-      "checkedAt": "2026-02-01T13:05:55.857Z"
+      "checkedAt": "2026-02-02T02:41:40.870Z"
     },
     {
       "domain": "1x10delbuengobierno.gob.ve",
@@ -2248,7 +1376,25 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T12:59:00.638Z"
+      "checkedAt": "2026-02-02T02:34:19.453Z"
+    },
+    {
+      "domain": "abae.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:10.504Z"
+    },
+    {
+      "domain": "agn.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:40.510Z"
     },
     {
       "domain": "agrosur.gob.ve",
@@ -2256,8 +1402,35 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T13:00:59.781Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:36:18.243Z"
+    },
+    {
+      "domain": "alcaldiadecolon.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:10.491Z"
+    },
+    {
+      "domain": "alcaldiadeguacara.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:40.499Z"
+    },
+    {
+      "domain": "alcaldiadeheres.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:40.499Z"
     },
     {
       "domain": "alcaldiadelmunicipiotinaco.gob.ve",
@@ -2266,7 +1439,25 @@
       "responseTime": null,
       "ssl": null,
       "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T12:58:20.417Z"
+      "checkedAt": "2026-02-02T02:33:37.891Z"
+    },
+    {
+      "domain": "alcaldiademara.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:42:40.484Z"
+    },
+    {
+      "domain": "alcaldiadepalavecino.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:10.504Z"
     },
     {
       "domain": "alcaldiadeplaza.gob.ve",
@@ -2275,7 +1466,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T13:02:52.129Z"
+      "checkedAt": "2026-02-02T02:38:23.990Z"
     },
     {
       "domain": "alcaldiaderibas.gob.ve",
@@ -2284,7 +1475,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:05:07.881Z"
+      "checkedAt": "2026-02-02T02:40:47.537Z"
     },
     {
       "domain": "alcaldiadesancristobal.gob.ve",
@@ -2293,7 +1484,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:08:05.902Z"
+      "checkedAt": "2026-02-02T02:43:40.499Z"
     },
     {
       "domain": "alcaldiadesandiego.gob.ve",
@@ -2301,8 +1492,17 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T13:06:17.751Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:42:06.934Z"
+    },
+    {
+      "domain": "alcaldiadezamora.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:40.499Z"
     },
     {
       "domain": "alcaldiaelhatillo.gob.ve",
@@ -2310,8 +1510,17 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:08:03.628Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:40.499Z"
+    },
+    {
+      "domain": "alcaldiagirardot.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:10.489Z"
     },
     {
       "domain": "alcaldiamunicipiolibertador-mer.gob.ve",
@@ -2319,8 +1528,26 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
+      "error": "EAI_AGAIN",
+      "checkedAt": "2026-02-02T02:37:28.913Z"
+    },
+    {
+      "domain": "alcaldiamunicipiosucre.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:02:10.308Z"
+      "checkedAt": "2026-02-02T02:43:40.499Z"
+    },
+    {
+      "domain": "alcaldiapaez.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:10.489Z"
     },
     {
       "domain": "alcaldiasantarosalia.gob.ve",
@@ -2329,7 +1556,25 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:07:04.714Z"
+      "checkedAt": "2026-02-02T02:42:40.484Z"
+    },
+    {
+      "domain": "alcaldiasimonbolivar.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:42:40.484Z"
+    },
+    {
+      "domain": "amazonas.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:40.565Z"
     },
     {
       "domain": "an.gob.ve",
@@ -2338,7 +1583,25 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:13:35.262Z"
+      "checkedAt": "2026-02-02T02:47:40.553Z"
+    },
+    {
+      "domain": "anzoategui.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:40.510Z"
+    },
+    {
+      "domain": "apure.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:10.559Z"
     },
     {
       "domain": "aragua.gob.ve",
@@ -2347,7 +1610,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:12:40.682Z"
+      "checkedAt": "2026-02-02T02:47:10.547Z"
     },
     {
       "domain": "asambleanacional.gob.ve",
@@ -2355,8 +1618,17 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:09:15.665Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:40.510Z"
+    },
+    {
+      "domain": "austria.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:40.521Z"
     },
     {
       "domain": "avilatv.gob.ve",
@@ -2365,7 +1637,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:11:31.234Z"
+      "checkedAt": "2026-02-02T02:46:10.526Z"
     },
     {
       "domain": "banavih.gob.ve",
@@ -2373,8 +1645,26 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:11:47.002Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:40.535Z"
+    },
+    {
+      "domain": "bandes.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:40.550Z"
+    },
+    {
+      "domain": "banmujer.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:10.530Z"
     },
     {
       "domain": "bibliotecayacucho.gob.ve",
@@ -2383,7 +1673,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:11:13.966Z"
+      "checkedAt": "2026-02-02T02:46:10.529Z"
     },
     {
       "domain": "billeteramovil.gob.ve",
@@ -2392,7 +1682,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:01:44.424Z"
+      "checkedAt": "2026-02-02T02:37:07.522Z"
     },
     {
       "domain": "blockchain.gob.ve",
@@ -2401,7 +1691,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T13:00:49.768Z"
+      "checkedAt": "2026-02-02T02:36:09.151Z"
     },
     {
       "domain": "bnv.gob.ve",
@@ -2409,8 +1699,26 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T13:11:15.578Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:10.530Z"
+    },
+    {
+      "domain": "bolipuertos.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:10.489Z"
+    },
+    {
+      "domain": "bomberosmerida.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:40.535Z"
     },
     {
       "domain": "bt.gob.ve",
@@ -2418,8 +1726,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:11:46.467Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:40.534Z"
     },
     {
       "domain": "caracas.gob.ve",
@@ -2427,8 +1735,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:10:18.159Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:40.521Z"
     },
     {
       "domain": "carrizal-miranda.gob.ve",
@@ -2437,7 +1745,25 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:12:47.897Z"
+      "checkedAt": "2026-02-02T02:47:10.547Z"
+    },
+    {
+      "domain": "cass.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:40.565Z"
+    },
+    {
+      "domain": "cenal.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:10.547Z"
     },
     {
       "domain": "cenaoz.gob.ve",
@@ -2446,7 +1772,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "ECONNREFUSED",
-      "checkedAt": "2026-02-01T12:59:55.082Z"
+      "checkedAt": "2026-02-02T02:35:06.334Z"
+    },
+    {
+      "domain": "cendis.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:40.510Z"
     },
     {
       "domain": "cendit.gob.ve",
@@ -2454,8 +1789,17 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:10:18.292Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:40.521Z"
+    },
+    {
+      "domain": "cenditel.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:10.516Z"
     },
     {
       "domain": "cenvih.gob.ve",
@@ -2463,8 +1807,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:02:08.700Z"
+      "error": "ENOTFOUND",
+      "checkedAt": "2026-02-02T02:37:26.886Z"
     },
     {
       "domain": "cesppa.gob.ve",
@@ -2473,7 +1817,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:03:37.746Z"
+      "checkedAt": "2026-02-02T02:39:05.071Z"
     },
     {
       "domain": "cfg.gob.ve",
@@ -2482,7 +1826,25 @@
       "responseTime": null,
       "ssl": null,
       "error": "ECONNREFUSED",
-      "checkedAt": "2026-02-01T13:05:26.324Z"
+      "checkedAt": "2026-02-02T02:41:13.967Z"
+    },
+    {
+      "domain": "cgesucre.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:40.510Z"
+    },
+    {
+      "domain": "cgr.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:10.547Z"
     },
     {
       "domain": "chambajuvenil.gob.ve",
@@ -2491,7 +1853,25 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:00:13.818Z"
+      "checkedAt": "2026-02-02T02:35:21.358Z"
+    },
+    {
+      "domain": "ciara.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:40.510Z"
+    },
+    {
+      "domain": "ciepe.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:40.553Z"
     },
     {
       "domain": "circuitorrb.gob.ve",
@@ -2499,8 +1879,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:02:07.486Z"
+      "error": "EAI_AGAIN",
+      "checkedAt": "2026-02-02T02:37:26.626Z"
     },
     {
       "domain": "circuitoscomunales.gob.ve",
@@ -2509,7 +1889,25 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T12:57:42.937Z"
+      "checkedAt": "2026-02-02T02:33:01.717Z"
+    },
+    {
+      "domain": "cmchacao.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:40.535Z"
+    },
+    {
+      "domain": "cmldc.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:40.553Z"
     },
     {
       "domain": "cnc.gob.ve",
@@ -2517,8 +1915,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:09:43.349Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:10.518Z"
     },
     {
       "domain": "cne.gob.ve",
@@ -2527,7 +1925,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:13:21.502Z"
+      "checkedAt": "2026-02-02T02:47:40.551Z"
     },
     {
       "domain": "cnh.gob.ve",
@@ -2536,7 +1934,25 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:07:50.066Z"
+      "checkedAt": "2026-02-02T02:43:10.488Z"
+    },
+    {
+      "domain": "cnti.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:40.566Z"
+    },
+    {
+      "domain": "cntq.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:40.525Z"
     },
     {
       "domain": "codecyt.gob.ve",
@@ -2545,7 +1961,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:09:03.991Z"
+      "checkedAt": "2026-02-02T02:44:10.503Z"
     },
     {
       "domain": "comisionesequibo.gob.ve",
@@ -2554,7 +1970,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T12:58:41.492Z"
+      "checkedAt": "2026-02-02T02:33:59.869Z"
     },
     {
       "domain": "comunas.gob.ve",
@@ -2563,7 +1979,34 @@
       "responseTime": null,
       "ssl": null,
       "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T12:59:11.281Z"
+      "checkedAt": "2026-02-02T02:34:29.735Z"
+    },
+    {
+      "domain": "conalot.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:40.510Z"
+    },
+    {
+      "domain": "conapdis.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:10.516Z"
+    },
+    {
+      "domain": "conatel.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:40.524Z"
     },
     {
       "domain": "conati.gob.ve",
@@ -2572,7 +2015,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:02:46.762Z"
+      "checkedAt": "2026-02-02T02:38:23.086Z"
     },
     {
       "domain": "concejomunicipalacevedo.gob.ve",
@@ -2581,7 +2024,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:03:55.121Z"
+      "checkedAt": "2026-02-02T02:39:28.899Z"
     },
     {
       "domain": "concejomunicipalplaza.gob.ve",
@@ -2590,7 +2033,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:03:17.083Z"
+      "checkedAt": "2026-02-02T02:38:53.931Z"
     },
     {
       "domain": "concejomunicipalzamora.gob.ve",
@@ -2599,7 +2042,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:05:23.337Z"
+      "checkedAt": "2026-02-02T02:41:00.348Z"
     },
     {
       "domain": "construpatria.gob.ve",
@@ -2608,7 +2051,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:04:58.035Z"
+      "checkedAt": "2026-02-02T02:40:37.521Z"
     },
     {
       "domain": "consulado.gob.ve",
@@ -2616,8 +2059,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:08:46.270Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:10.504Z"
     },
     {
       "domain": "contraloriaautonomadeguacara.gob.ve",
@@ -2626,7 +2069,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T13:03:40.096Z"
+      "checkedAt": "2026-02-02T02:39:04.826Z"
+    },
+    {
+      "domain": "contraloriadebarquisimeto.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:10.530Z"
     },
     {
       "domain": "contraloriadelmunicipioacevedo.gob.ve",
@@ -2635,7 +2087,52 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:03:59.408Z"
+      "checkedAt": "2026-02-02T02:39:33.049Z"
+    },
+    {
+      "domain": "contraloriademaracaibo.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:10.530Z"
+    },
+    {
+      "domain": "contraloriadevalera.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:10.491Z"
+    },
+    {
+      "domain": "contraloriaestadozulia.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:42:10.475Z"
+    },
+    {
+      "domain": "contraloriamonagas.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:10.529Z"
+    },
+    {
+      "domain": "contraloriarosariodeperija.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:39:24.995Z"
     },
     {
       "domain": "corpivensa.gob.ve",
@@ -2644,7 +2141,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:09:35.348Z"
+      "checkedAt": "2026-02-02T02:44:40.510Z"
+    },
+    {
+      "domain": "corpocentro.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:40.565Z"
     },
     {
       "domain": "corpoelec.gob.ve",
@@ -2653,7 +2159,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:09:03.993Z"
+      "checkedAt": "2026-02-02T02:44:10.503Z"
     },
     {
       "domain": "corposaludaragua.gob.ve",
@@ -2661,8 +2167,17 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:02:46.749Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:38:22.584Z"
+    },
+    {
+      "domain": "corposaludtachira.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:40.499Z"
     },
     {
       "domain": "corposervica.gob.ve",
@@ -2670,8 +2185,17 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T13:00:58.238Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:36:18.243Z"
+    },
+    {
+      "domain": "corpotulipa.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:40.565Z"
     },
     {
       "domain": "corpovex.gob.ve",
@@ -2680,7 +2204,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:03:30.079Z"
+      "checkedAt": "2026-02-02T02:39:08.093Z"
+    },
+    {
+      "domain": "correodelorinoco.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:10.489Z"
     },
     {
       "domain": "cpsa.gob.ve",
@@ -2689,7 +2222,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T12:57:43.465Z"
+      "checkedAt": "2026-02-02T02:33:02.189Z"
     },
     {
       "domain": "cscv.gob.ve",
@@ -2697,8 +2230,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:04:29.417Z"
+      "error": "EAI_AGAIN",
+      "checkedAt": "2026-02-02T02:39:52.675Z"
     },
     {
       "domain": "csn.gob.ve",
@@ -2707,25 +2240,25 @@
       "responseTime": null,
       "ssl": null,
       "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T13:04:22.612Z"
+      "checkedAt": "2026-02-02T02:39:58.657Z"
     },
     {
-      "domain": "cuspal.gob.ve",
-      "status": "offline",
-      "httpCode": null,
-      "responseTime": null,
-      "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:01:21.339Z"
-    },
-    {
-      "domain": "e-bolivar.gob.ve",
+      "domain": "cvg.gob.ve",
       "status": "offline",
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:05:08.050Z"
+      "checkedAt": "2026-02-02T02:42:10.475Z"
+    },
+    {
+      "domain": "defensapublica.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:40.535Z"
     },
     {
       "domain": "elpuebloparticipa.gob.ve",
@@ -2734,7 +2267,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T12:59:49.878Z"
+      "checkedAt": "2026-02-02T02:35:03.430Z"
     },
     {
       "domain": "embajada.gob.ve",
@@ -2742,8 +2275,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:08:46.793Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:10.504Z"
     },
     {
       "domain": "envial.gob.ve",
@@ -2752,7 +2285,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:01:13.816Z"
+      "checkedAt": "2026-02-02T02:36:37.278Z"
     },
     {
       "domain": "epuvenezuela.gob.ve",
@@ -2761,7 +2294,34 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:05:23.879Z"
+      "checkedAt": "2026-02-02T02:41:04.287Z"
+    },
+    {
+      "domain": "falcon.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:40.523Z"
+    },
+    {
+      "domain": "fevp.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:10.503Z"
+    },
+    {
+      "domain": "fidetel.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:10.558Z"
     },
     {
       "domain": "fii.gob.ve",
@@ -2769,8 +2329,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:10:27.231Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:40.520Z"
     },
     {
       "domain": "fitven.gob.ve",
@@ -2778,8 +2338,35 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:07:23.180Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:10.489Z"
+    },
+    {
+      "domain": "fogade.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:10.559Z"
+    },
+    {
+      "domain": "fona.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:10.488Z"
+    },
+    {
+      "domain": "fonacit.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:40.536Z"
     },
     {
       "domain": "fonaguas.gob.ve",
@@ -2788,7 +2375,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T12:59:38.635Z"
+      "checkedAt": "2026-02-02T02:34:39.887Z"
+    },
+    {
+      "domain": "fondemi.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:10.559Z"
     },
     {
       "domain": "fonden.gob.ve",
@@ -2797,7 +2393,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:10:11.009Z"
+      "checkedAt": "2026-02-02T02:45:10.516Z"
     },
     {
       "domain": "fonpyme.gob.ve",
@@ -2806,7 +2402,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:11:30.829Z"
+      "checkedAt": "2026-02-02T02:46:10.530Z"
     },
     {
       "domain": "fundabit.gob.ve",
@@ -2815,7 +2411,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:08:26.398Z"
+      "checkedAt": "2026-02-02T02:43:40.499Z"
     },
     {
       "domain": "fundacioncami.gob.ve",
@@ -2823,8 +2419,26 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T13:07:24.274Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:10.489Z"
+    },
+    {
+      "domain": "fundacite-amazonas.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:10.532Z"
+    },
+    {
+      "domain": "fundacite-falcon.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:10.529Z"
     },
     {
       "domain": "fundacite-merida.gob.ve",
@@ -2833,7 +2447,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:12:47.898Z"
+      "checkedAt": "2026-02-02T02:47:10.547Z"
+    },
+    {
+      "domain": "fundadeporte.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:10.546Z"
     },
     {
       "domain": "fundalanavial.gob.ve",
@@ -2842,7 +2465,52 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:08:56.787Z"
+      "checkedAt": "2026-02-02T02:44:10.504Z"
+    },
+    {
+      "domain": "fundapatrimonio.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:10.529Z"
+    },
+    {
+      "domain": "fundarte.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:10.557Z"
+    },
+    {
+      "domain": "fundayacucho.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:10.558Z"
+    },
+    {
+      "domain": "fundelec.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:10.516Z"
+    },
+    {
+      "domain": "fundesta.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:42:40.484Z"
     },
     {
       "domain": "funrevi.gob.ve",
@@ -2851,7 +2519,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:12:00.392Z"
+      "checkedAt": "2026-02-02T02:46:40.536Z"
     },
     {
       "domain": "funves.gob.ve",
@@ -2860,7 +2528,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:10:11.542Z"
+      "checkedAt": "2026-02-02T02:45:10.517Z"
     },
     {
       "domain": "gdc.gob.ve",
@@ -2869,7 +2537,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:08:26.697Z"
+      "checkedAt": "2026-02-02T02:43:40.499Z"
     },
     {
       "domain": "gmsaberytrabajo.gob.ve",
@@ -2878,7 +2546,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:02:46.756Z"
+      "checkedAt": "2026-02-02T02:38:22.984Z"
+    },
+    {
+      "domain": "guarico.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:10.489Z"
     },
     {
       "domain": "guayanaesequiba.gob.ve",
@@ -2887,7 +2564,25 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T12:57:09.336Z"
+      "checkedAt": "2026-02-02T02:32:55.609Z"
+    },
+    {
+      "domain": "hidrocapital.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "EAI_AGAIN",
+      "checkedAt": "2026-02-02T02:34:53.706Z"
+    },
+    {
+      "domain": "hidrocaribe.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:40.535Z"
     },
     {
       "domain": "hidrocentro.gob.ve",
@@ -2896,7 +2591,43 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:13:05.253Z"
+      "checkedAt": "2026-02-02T02:47:10.547Z"
+    },
+    {
+      "domain": "hidrolara.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:10.517Z"
+    },
+    {
+      "domain": "hidropaez.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:10.503Z"
+    },
+    {
+      "domain": "hidrosuroeste.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:40.523Z"
+    },
+    {
+      "domain": "hidroven.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:10.547Z"
     },
     {
       "domain": "huc.gob.ve",
@@ -2905,7 +2636,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:02:35.036Z"
+      "checkedAt": "2026-02-02T02:37:51.087Z"
+    },
+    {
+      "domain": "iactp.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:40.536Z"
     },
     {
       "domain": "iaim.gob.ve",
@@ -2914,7 +2654,43 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:05:55.596Z"
+      "checkedAt": "2026-02-02T02:41:40.465Z"
+    },
+    {
+      "domain": "idea.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:40.553Z"
+    },
+    {
+      "domain": "igvsb.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:40.551Z"
+    },
+    {
+      "domain": "inac.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:40.521Z"
+    },
+    {
+      "domain": "inamujer.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:40.551Z"
     },
     {
       "domain": "inatur.gob.ve",
@@ -2923,7 +2699,34 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:12:40.794Z"
+      "checkedAt": "2026-02-02T02:47:10.547Z"
+    },
+    {
+      "domain": "inces.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:40.510Z"
+    },
+    {
+      "domain": "incret.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:10.503Z"
+    },
+    {
+      "domain": "ine.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:40.551Z"
     },
     {
       "domain": "inea.gob.ve",
@@ -2932,7 +2735,34 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:13:56.755Z"
+      "checkedAt": "2026-02-02T02:47:40.551Z"
+    },
+    {
+      "domain": "infocentro.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:40.566Z"
+    },
+    {
+      "domain": "inh.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:10.547Z"
+    },
+    {
+      "domain": "inhrr.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:10.557Z"
     },
     {
       "domain": "inia.gob.ve",
@@ -2941,7 +2771,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:12:37.395Z"
+      "checkedAt": "2026-02-02T02:47:10.546Z"
     },
     {
       "domain": "inn.gob.ve",
@@ -2950,7 +2780,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:13:40.228Z"
+      "checkedAt": "2026-02-02T02:47:40.550Z"
+    },
+    {
+      "domain": "inparques.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:40.565Z"
     },
     {
       "domain": "insai.gob.ve",
@@ -2958,8 +2797,35 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:08:07.269Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:40.499Z"
+    },
+    {
+      "domain": "insalud.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:10.516Z"
+    },
+    {
+      "domain": "insopesca.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:10.504Z"
+    },
+    {
+      "domain": "inti.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:10.526Z"
     },
     {
       "domain": "intt.gob.ve",
@@ -2967,8 +2833,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ECONNRESET",
-      "checkedAt": "2026-02-01T13:08:26.774Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:40.499Z"
     },
     {
       "domain": "inzit.gob.ve",
@@ -2976,8 +2842,17 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:09:14.568Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:40.510Z"
+    },
+    {
+      "domain": "ipasme.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:10.557Z"
     },
     {
       "domain": "ipostel.gob.ve",
@@ -2986,7 +2861,25 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:12:48.412Z"
+      "checkedAt": "2026-02-02T02:47:10.546Z"
+    },
+    {
+      "domain": "ipsfa.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:42:40.484Z"
+    },
+    {
+      "domain": "ivic.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:40.499Z"
     },
     {
       "domain": "jirajara.gob.ve",
@@ -2995,7 +2888,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T12:59:56.000Z"
+      "checkedAt": "2026-02-02T02:35:07.928Z"
     },
     {
       "domain": "juegosnacionales.gob.ve",
@@ -3004,7 +2897,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T12:59:01.264Z"
+      "checkedAt": "2026-02-02T02:34:19.717Z"
+    },
+    {
+      "domain": "lara.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:10.558Z"
     },
     {
       "domain": "mercal.gob.ve",
@@ -3013,7 +2915,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:13:00.370Z"
+      "checkedAt": "2026-02-02T02:47:10.547Z"
     },
     {
       "domain": "merida.gob.ve",
@@ -3022,7 +2924,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:13:35.262Z"
+      "checkedAt": "2026-02-02T02:47:40.553Z"
     },
     {
       "domain": "metrodecaracas.gob.ve",
@@ -3030,26 +2932,26 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:11:52.559Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:40.536Z"
     },
     {
-      "domain": "mincoex.gob.ve",
+      "domain": "mindefensa.gob.ve",
       "status": "offline",
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T12:57:39.169Z"
+      "checkedAt": "2026-02-02T02:48:10.559Z"
     },
     {
-      "domain": "mincultura.gob.ve",
+      "domain": "mindeporte.gob.ve",
       "status": "offline",
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:05:25.977Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:40.499Z"
     },
     {
       "domain": "minec.gob.ve",
@@ -3057,8 +2959,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:09:18.867Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:40.510Z"
     },
     {
       "domain": "minerven.gob.ve",
@@ -3067,7 +2969,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T13:04:12.554Z"
+      "checkedAt": "2026-02-02T02:39:48.639Z"
     },
     {
       "domain": "minhidrocarburos.gob.ve",
@@ -3076,7 +2978,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T12:57:43.250Z"
+      "checkedAt": "2026-02-02T02:33:01.955Z"
     },
     {
       "domain": "minhvi.gob.ve",
@@ -3085,7 +2987,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:02:19.855Z"
+      "checkedAt": "2026-02-02T02:37:35.657Z"
+    },
+    {
+      "domain": "minmujer.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:10.491Z"
     },
     {
       "domain": "minpal.gob.ve",
@@ -3094,7 +3005,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:10:05.962Z"
+      "checkedAt": "2026-02-02T02:45:10.516Z"
     },
     {
       "domain": "minpet.gob.ve",
@@ -3103,7 +3014,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:00:47.382Z"
+      "checkedAt": "2026-02-02T02:36:06.470Z"
+    },
+    {
+      "domain": "minpi.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:10.516Z"
     },
     {
       "domain": "minppau.gob.ve",
@@ -3112,7 +3032,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:02:16.418Z"
+      "checkedAt": "2026-02-02T02:37:39.225Z"
     },
     {
       "domain": "mintur.gob.ve",
@@ -3121,7 +3041,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:15:18.002Z"
+      "checkedAt": "2026-02-02T02:48:40.565Z"
+    },
+    {
+      "domain": "miranda-carabobo.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:10.546Z"
     },
     {
       "domain": "miranda.gob.ve",
@@ -3130,7 +3059,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:11:31.236Z"
+      "checkedAt": "2026-02-02T02:46:10.526Z"
     },
     {
       "domain": "misionribas.gob.ve",
@@ -3139,7 +3068,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T12:58:43.565Z"
+      "checkedAt": "2026-02-02T02:34:02.458Z"
     },
     {
       "domain": "mp.gob.ve",
@@ -3147,8 +3076,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:09:42.811Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:10.516Z"
     },
     {
       "domain": "mppct.gob.ve",
@@ -3157,7 +3086,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T12:59:56.080Z"
+      "checkedAt": "2026-02-02T02:35:06.499Z"
     },
     {
       "domain": "mppe.gob.ve",
@@ -3166,7 +3095,34 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T12:59:11.664Z"
+      "checkedAt": "2026-02-02T02:34:20.867Z"
+    },
+    {
+      "domain": "mppee.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:42:40.484Z"
+    },
+    {
+      "domain": "mppef.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:10.503Z"
+    },
+    {
+      "domain": "mppeu.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:42:10.476Z"
     },
     {
       "domain": "mppre.gob.ve",
@@ -3175,7 +3131,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:09:03.827Z"
+      "checkedAt": "2026-02-02T02:44:10.503Z"
+    },
+    {
+      "domain": "mpps.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:10.517Z"
     },
     {
       "domain": "nube.gob.ve",
@@ -3184,7 +3149,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T12:58:43.564Z"
+      "checkedAt": "2026-02-02T02:34:02.297Z"
     },
     {
       "domain": "nuevaesparta.gob.ve",
@@ -3193,7 +3158,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:11:56.275Z"
+      "checkedAt": "2026-02-02T02:46:40.535Z"
     },
     {
       "domain": "ochina.gob.ve",
@@ -3202,7 +3167,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:15:09.261Z"
+      "checkedAt": "2026-02-02T02:48:40.565Z"
     },
     {
       "domain": "oncti.gob.ve",
@@ -3210,8 +3175,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:09:43.370Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:10.517Z"
     },
     {
       "domain": "ont.gob.ve",
@@ -3220,7 +3185,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:01:13.584Z"
+      "checkedAt": "2026-02-02T02:36:22.579Z"
+    },
+    {
+      "domain": "onuginebra.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:10.517Z"
     },
     {
       "domain": "opsu.gob.ve",
@@ -3228,8 +3202,17 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:09:13.917Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:40.510Z"
+    },
+    {
+      "domain": "pcivil.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:40.553Z"
     },
     {
       "domain": "pciviltachira.gob.ve",
@@ -3238,7 +3221,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T12:57:44.792Z"
+      "checkedAt": "2026-02-02T02:33:03.566Z"
     },
     {
       "domain": "pescalba.gob.ve",
@@ -3247,7 +3230,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:06:28.117Z"
+      "checkedAt": "2026-02-02T02:42:10.475Z"
     },
     {
       "domain": "petro.gob.ve",
@@ -3256,7 +3239,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:01:13.813Z"
+      "checkedAt": "2026-02-02T02:36:37.275Z"
     },
     {
       "domain": "pgr.gob.ve",
@@ -3264,8 +3247,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:13:32.026Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:47:40.553Z"
     },
     {
       "domain": "planpatria.gob.ve",
@@ -3274,7 +3257,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:00:47.038Z"
+      "checkedAt": "2026-02-02T02:36:06.857Z"
+    },
+    {
+      "domain": "policiadearagua.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:10.489Z"
     },
     {
       "domain": "polimer.gob.ve",
@@ -3282,8 +3274,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T13:06:53.139Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:42:40.484Z"
     },
     {
       "domain": "polocientifico.gob.ve",
@@ -3292,7 +3284,43 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T12:59:24.560Z"
+      "checkedAt": "2026-02-02T02:34:38.222Z"
+    },
+    {
+      "domain": "portuguesa.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:40.565Z"
+    },
+    {
+      "domain": "presidencia.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:10.504Z"
+    },
+    {
+      "domain": "reddearte.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:40.524Z"
+    },
+    {
+      "domain": "redtv.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:40.512Z"
     },
     {
       "domain": "registrocivilsc.gob.ve",
@@ -3301,7 +3329,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:07:21.418Z"
+      "checkedAt": "2026-02-02T02:43:10.489Z"
     },
     {
       "domain": "regresoaclases.gob.ve",
@@ -3310,7 +3338,34 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T12:59:49.910Z"
+      "checkedAt": "2026-02-02T02:35:03.523Z"
+    },
+    {
+      "domain": "sabat.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:40.535Z"
+    },
+    {
+      "domain": "sahum.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:40.535Z"
+    },
+    {
+      "domain": "saime.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:40.524Z"
     },
     {
       "domain": "saludzulia.gob.ve",
@@ -3319,7 +3374,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:12:01.242Z"
+      "checkedAt": "2026-02-02T02:46:40.536Z"
+    },
+    {
+      "domain": "sapi.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:40.565Z"
     },
     {
       "domain": "saren.gob.ve",
@@ -3327,17 +3391,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:11:16.160Z"
-    },
-    {
-      "domain": "sarep.gob.ve",
-      "status": "offline",
-      "httpCode": null,
-      "responseTime": null,
-      "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:01:51.059Z"
+      "checkedAt": "2026-02-02T02:46:10.532Z"
     },
     {
       "domain": "satdc.gob.ve",
@@ -3345,8 +3400,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:03:47.090Z"
+      "error": "EAI_AGAIN",
+      "checkedAt": "2026-02-02T02:39:06.963Z"
     },
     {
       "domain": "sbr.gob.ve",
@@ -3355,7 +3410,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T12:58:10.873Z"
+      "checkedAt": "2026-02-02T02:33:29.252Z"
     },
     {
       "domain": "sen.gob.ve",
@@ -3364,7 +3419,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T12:57:09.247Z"
+      "checkedAt": "2026-02-02T02:32:55.657Z"
     },
     {
       "domain": "senafim.gob.ve",
@@ -3372,8 +3427,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T12:59:13.573Z"
+      "error": "EAI_AGAIN",
+      "checkedAt": "2026-02-02T02:34:30.872Z"
     },
     {
       "domain": "sencamer.gob.ve",
@@ -3382,7 +3437,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:14:23.209Z"
+      "checkedAt": "2026-02-02T02:48:10.558Z"
     },
     {
       "domain": "seniat.gob.ve",
@@ -3391,7 +3446,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:14:38.465Z"
+      "checkedAt": "2026-02-02T02:48:10.557Z"
     },
     {
       "domain": "siarteccarabobo.gob.ve",
@@ -3400,7 +3455,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T12:58:10.227Z"
+      "checkedAt": "2026-02-02T02:33:28.489Z"
     },
     {
       "domain": "sicm.gob.ve",
@@ -3409,7 +3464,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:04:57.274Z"
+      "checkedAt": "2026-02-02T02:40:36.718Z"
     },
     {
       "domain": "sinco.gob.ve",
@@ -3418,7 +3473,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:02:19.853Z"
+      "checkedAt": "2026-02-02T02:37:35.604Z"
     },
     {
       "domain": "sitssa.gob.ve",
@@ -3426,8 +3481,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:09:14.333Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:40.510Z"
     },
     {
       "domain": "snc.gob.ve",
@@ -3436,7 +3491,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:12:49.140Z"
+      "checkedAt": "2026-02-02T02:47:10.546Z"
     },
     {
       "domain": "softwarelibre.gob.ve",
@@ -3444,8 +3499,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:14:13.233Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:10.559Z"
     },
     {
       "domain": "softwarepublico.gob.ve",
@@ -3454,7 +3509,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:01:50.870Z"
+      "checkedAt": "2026-02-02T02:37:13.805Z"
+    },
+    {
+      "domain": "sogamic.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:10.517Z"
     },
     {
       "domain": "sogampi.gob.ve",
@@ -3463,7 +3527,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:10:47.976Z"
+      "checkedAt": "2026-02-02T02:45:40.525Z"
+    },
+    {
+      "domain": "sudeban.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:10.559Z"
     },
     {
       "domain": "sudebip.gob.ve",
@@ -3472,7 +3545,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:04:41.827Z"
+      "checkedAt": "2026-02-02T02:40:21.394Z"
     },
     {
       "domain": "sudeca.gob.ve",
@@ -3481,7 +3554,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:00:32.290Z"
+      "checkedAt": "2026-02-02T02:35:48.231Z"
     },
     {
       "domain": "sunacoop.gob.ve",
@@ -3490,7 +3563,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:14:26.765Z"
+      "checkedAt": "2026-02-02T02:48:10.559Z"
     },
     {
       "domain": "sunacrip.gob.ve",
@@ -3499,7 +3572,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:00:30.975Z"
+      "checkedAt": "2026-02-02T02:35:39.592Z"
     },
     {
       "domain": "sunagro.gob.ve",
@@ -3508,7 +3581,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "ECONNREFUSED",
-      "checkedAt": "2026-02-01T13:02:46.922Z"
+      "checkedAt": "2026-02-02T02:38:22.765Z"
     },
     {
       "domain": "sunai.gob.ve",
@@ -3517,7 +3590,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:13:47.333Z"
+      "checkedAt": "2026-02-02T02:47:40.553Z"
     },
     {
       "domain": "suscerte.gob.ve",
@@ -3526,7 +3599,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:12:17.890Z"
+      "checkedAt": "2026-02-02T02:46:40.536Z"
     },
     {
       "domain": "teatroteresacarreno.gob.ve",
@@ -3534,8 +3607,17 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:11:16.283Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:46:10.532Z"
+    },
+    {
+      "domain": "telecom.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:40.521Z"
     },
     {
       "domain": "tgc.gob.ve",
@@ -3543,17 +3625,17 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T13:08:11.381Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:40.499Z"
     },
     {
-      "domain": "turmero.gob.ve",
+      "domain": "unif.gob.ve",
       "status": "offline",
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:02:20.323Z"
+      "checkedAt": "2026-02-02T02:36:18.243Z"
     },
     {
       "domain": "utne.gob.ve",
@@ -3562,7 +3644,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T13:02:14.030Z"
+      "checkedAt": "2026-02-02T02:37:31.391Z"
     },
     {
       "domain": "vencert.gob.ve",
@@ -3571,7 +3653,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:09:35.043Z"
+      "checkedAt": "2026-02-02T02:44:40.510Z"
     },
     {
       "domain": "venezuela.gob.ve",
@@ -3580,7 +3662,16 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:15:10.436Z"
+      "checkedAt": "2026-02-02T02:48:40.565Z"
+    },
+    {
+      "domain": "vicepresidencia.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:44:10.504Z"
     },
     {
       "domain": "vpse.gob.ve",
@@ -3589,7 +3680,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:02:40.316Z"
+      "checkedAt": "2026-02-02T02:38:07.322Z"
     },
     {
       "domain": "vsctes.gob.ve",
@@ -3597,8 +3688,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "ENOTFOUND",
-      "checkedAt": "2026-02-01T12:59:00.459Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:34:18.086Z"
     },
     {
       "domain": "vtelca.gob.ve",
@@ -3606,8 +3697,8 @@
       "httpCode": null,
       "responseTime": null,
       "ssl": null,
-      "error": "EAI_AGAIN",
-      "checkedAt": "2026-02-01T13:07:34.292Z"
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:43:10.491Z"
     },
     {
       "domain": "vtv.gob.ve",
@@ -3616,7 +3707,25 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:10:44.873Z"
+      "checkedAt": "2026-02-02T02:45:40.521Z"
+    },
+    {
+      "domain": "vycsucre.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:45:40.523Z"
+    },
+    {
+      "domain": "yaracuy.gob.ve",
+      "status": "offline",
+      "httpCode": null,
+      "responseTime": null,
+      "ssl": null,
+      "error": "TIMEOUT",
+      "checkedAt": "2026-02-02T02:48:40.565Z"
     },
     {
       "domain": "zulia.gob.ve",
@@ -3625,7 +3734,7 @@
       "responseTime": null,
       "ssl": null,
       "error": "TIMEOUT",
-      "checkedAt": "2026-02-01T13:08:26.560Z"
+      "checkedAt": "2026-02-02T02:43:40.499Z"
     }
   ]
 }
