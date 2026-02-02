@@ -18,8 +18,8 @@ jobs:
 
       - name: Download status.json from server
         run: |
-          curl -sfL \
-            -H "User-Agent: Mozilla/5.0 (compatible; GitHubActions/1.0)" \
+          curl -vL \
+            -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
             -H "Accept: application/json" \
             --retry 3 \
             --retry-delay 5 \
