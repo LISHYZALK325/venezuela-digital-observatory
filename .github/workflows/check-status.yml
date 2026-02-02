@@ -18,14 +18,24 @@ jobs:
 
       - name: Download status.json from server
         run: |
-          curl -vL \
+          curl -sfL \
             -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
             -H "Accept: application/json" \
             --retry 3 \
             --retry-delay 5 \
             "https://api-beta.macedoniadelnorte.com/monitor/status.json" \
             -o monitor/status.json
-          echo "Downloaded status.json successfully"
+
+      - name: Validate JSON
+        run: |
+          if ! jq empty monitor/status.json 2>/dev/null; then
+            echo "Error: Downloaded file is not valid JSON"
+            echo "First 500 chars of file:"
+            head -c 500 monitor/status.json
+            exit 1
+          fi
+          echo "JSON validation passed"
+          echo "Domains count: $(jq '.domains | length' monitor/status.json)"
 
       - name: Commit status.json
         run: |
