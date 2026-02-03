@@ -3,15 +3,15 @@ const http = require('http');
 const tls = require('tls');
 const fs = require('fs');
 const path = require('path');
-const { MongoClient, ObjectId } = require('mongodb');
 
-// Config
-const TIMEOUT_MS = 15000;
-const CONCURRENCY = 15;
+const TIMEOUT_MS = 30000;
+const CONCURRENCY = 8;
 const MAX_REDIRECTS = 5;
+const RETRY_ATTEMPTS = 2;
 const DATA_FILE = process.env.DATA_FILE || path.join(__dirname, '../data/whois_gobve.json');
 const OUTPUT_FILE = process.env.OUTPUT_FILE || path.join(__dirname, 'status.json');
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/ve_monitor';
+const MONGO_URI = process.env.MONGO_URI;
+const MONGO_ENABLED = !!MONGO_URI;
 
 // Headers to mimic a real browser
 const HEADERS = {
@@ -30,8 +30,8 @@ const C = {
   dim: '\x1b[2m',
 };
 
-// HTTP codes that indicate HEAD is not supported
-const HEAD_UNSUPPORTED_CODES = [405, 501, 400];
+// Errors worth retrying
+const RETRYABLE_ERRORS = ['TIMEOUT', 'ETIMEDOUT', 'ECONNRESET', 'ECONNREFUSED', 'ENOTFOUND', 'EAI_AGAIN'];
 
 // Get SSL certificate information
 function getSSLInfo(domain) {
@@ -161,14 +161,9 @@ async function checkDomain(domain) {
   // Get SSL info first (only for HTTPS)
   sslInfo = await getSSLInfo(domain);
 
-  // Follow redirects
+  // Follow redirects - Use GET directly (more compatible than HEAD with .gob.ve sites)
   for (let i = 0; i <= MAX_REDIRECTS; i++) {
-    result = await makeRequest(currentUrl, 'HEAD', TIMEOUT_MS);
-
-    // If HEAD returned unsupported code, retry with GET
-    if (result.success && HEAD_UNSUPPORTED_CODES.includes(result.httpCode)) {
-      result = await makeRequest(currentUrl, 'GET', TIMEOUT_MS);
-    }
+    result = await makeRequest(currentUrl, 'GET', TIMEOUT_MS);
 
     // If HTTPS failed on first attempt, try HTTP
     if (!result.success && i === 0 && usedHttps) {
@@ -176,10 +171,7 @@ async function checkDomain(domain) {
       currentUrl = `http://${domain}`;
       sslInfo = null; // No SSL for HTTP
 
-      result = await makeRequest(currentUrl, 'HEAD', TIMEOUT_MS);
-      if (result.success && HEAD_UNSUPPORTED_CODES.includes(result.httpCode)) {
-        result = await makeRequest(currentUrl, 'GET', TIMEOUT_MS);
-      }
+      result = await makeRequest(currentUrl, 'GET', TIMEOUT_MS);
     }
 
     if (!result.success) {
@@ -236,6 +228,23 @@ async function checkDomain(domain) {
   };
 }
 
+// Check domain with retry logic
+async function checkDomainWithRetry(domain) {
+  let result = await checkDomain(domain);
+
+  // Retry if failed with retryable error
+  if (result.status === 'offline' && RETRYABLE_ERRORS.includes(result.error)) {
+    for (let attempt = 1; attempt <= RETRY_ATTEMPTS; attempt++) {
+      // Wait before retry (2s, 4s)
+      await new Promise(r => setTimeout(r, attempt * 2000));
+      result = await checkDomain(domain);
+      if (result.status === 'online') break;
+    }
+  }
+
+  return result;
+}
+
 // Process domains in batches
 async function processBatch(domains, batchSize) {
   const results = [];
@@ -243,7 +252,7 @@ async function processBatch(domains, batchSize) {
 
   for (let i = 0; i < domains.length; i += batchSize) {
     const batch = domains.slice(i, i + batchSize);
-    const batchResults = await Promise.all(batch.map(checkDomain));
+    const batchResults = await Promise.all(batch.map(checkDomainWithRetry));
     results.push(...batchResults);
 
     // Progress
@@ -264,67 +273,94 @@ async function processBatch(domains, batchSize) {
   return results;
 }
 
-// Save to MongoDB
-async function saveToMongoDB(results, summary, checkDuration) {
+// Save to MongoDB with retry (only if MONGO_URI is defined)
+async function saveToMongoDB(results, summary, checkDuration, maxRetries = 3) {
+  if (!MONGO_ENABLED) {
+    console.log('\nMongoDB: Skipped (MONGO_URI not defined)');
+    return;
+  }
+
+  // Dynamic import - only load mongodb when needed
+  const { MongoClient } = require('mongodb');
+
   let client;
+  let lastError;
 
-  try {
-    console.log(`\nConnecting to MongoDB: ${MONGO_URI.replace(/\/\/[^:]+:[^@]+@/, '//***:***@')}`);
-    client = new MongoClient(MONGO_URI);
-    await client.connect();
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      console.log(`\nConnecting to MongoDB (attempt ${attempt}/${maxRetries}): ${MONGO_URI.replace(/\/\/[^:]+:[^@]+@/, '//***:***@')}`);
+      client = new MongoClient(MONGO_URI, {
+        connectTimeoutMS: 30000,
+        serverSelectionTimeoutMS: 30000
+      });
+      await client.connect();
 
-    const db = client.db();
-    const checksCollection = db.collection('ve_monitor_checks');
-    const domainsCollection = db.collection('ve_monitor_domains');
+      const db = client.db();
+      const checksCollection = db.collection('ve_monitor_checks');
+      const domainsCollection = db.collection('ve_monitor_domains');
 
-    // Create indexes if they don't exist
-    await domainsCollection.createIndex({ domain: 1, checkedAt: -1 });
-    await domainsCollection.createIndex({ checkId: 1 });
-    await domainsCollection.createIndex({ checkedAt: -1 });
-    await checksCollection.createIndex({ checkedAt: -1 });
+      // Create indexes if they don't exist
+      await domainsCollection.createIndex({ domain: 1, checkedAt: -1 });
+      await domainsCollection.createIndex({ checkId: 1 });
+      await domainsCollection.createIndex({ checkedAt: -1 });
+      await checksCollection.createIndex({ checkedAt: -1 });
 
-    // Insert check record
-    const checkRecord = {
-      checkedAt: new Date(),
-      checkDuration,
-      summary
-    };
-    const checkResult = await checksCollection.insertOne(checkRecord);
-    const checkId = checkResult.insertedId;
+      // Insert check record
+      const checkRecord = {
+        checkedAt: new Date(),
+        checkDuration,
+        summary
+      };
+      const checkResult = await checksCollection.insertOne(checkRecord);
+      const checkId = checkResult.insertedId;
 
-    // Prepare domain records with checkId
-    const domainRecords = results.map(r => ({
-      checkId,
-      checkedAt: r.checkedAt,
-      domain: r.domain,
-      status: r.status,
-      httpCode: r.httpCode,
-      responseTime: r.responseTime,
-      error: r.error || null,
-      ssl: r.ssl,
-      headers: r.headers,
-      redirects: r.redirects,
-      finalUrl: r.finalUrl
-    }));
+      // Prepare domain records with checkId
+      const domainRecords = results.map(r => ({
+        checkId,
+        checkedAt: r.checkedAt,
+        domain: r.domain,
+        status: r.status,
+        httpCode: r.httpCode,
+        responseTime: r.responseTime,
+        error: r.error || null,
+        ssl: r.ssl,
+        headers: r.headers,
+        redirects: r.redirects,
+        finalUrl: r.finalUrl
+      }));
 
-    // Bulk insert domain records
-    await domainsCollection.insertMany(domainRecords);
+      // Bulk insert domain records
+      await domainsCollection.insertMany(domainRecords);
 
-    console.log(`${C.green}Saved to MongoDB:${C.reset} 1 check + ${results.length} domain records`);
+      console.log(`${C.green}Saved to MongoDB:${C.reset} 1 check + ${results.length} domain records`);
 
-    // Get total count
-    const totalChecks = await checksCollection.countDocuments();
-    const totalDomainRecords = await domainsCollection.countDocuments();
-    console.log(`${C.dim}Total in DB: ${totalChecks} checks, ${totalDomainRecords} domain records${C.reset}`);
+      // Get total count
+      const totalChecks = await checksCollection.countDocuments();
+      const totalDomainRecords = await domainsCollection.countDocuments();
+      console.log(`${C.dim}Total in DB: ${totalChecks} checks, ${totalDomainRecords} domain records${C.reset}`);
 
-  } catch (err) {
-    console.error(`${C.red}MongoDB Error:${C.reset} ${err.message}`);
-    console.log(`${C.yellow}Continuing without MongoDB...${C.reset}`);
-  } finally {
-    if (client) {
-      await client.close();
+      // Success - exit the retry loop
+      return;
+
+    } catch (err) {
+      lastError = err;
+      console.error(`${C.red}MongoDB Error (attempt ${attempt}):${C.reset} ${err.message}`);
+
+      if (attempt < maxRetries) {
+        const waitTime = attempt * 10; // 10s, 20s, 30s
+        console.log(`${C.yellow}Retrying in ${waitTime}s...${C.reset}`);
+        await new Promise(resolve => setTimeout(resolve, waitTime * 1000));
+      }
+    } finally {
+      if (client) {
+        try { await client.close(); } catch (e) {}
+      }
     }
   }
+
+  // All retries failed
+  console.error(`${C.red}MongoDB Error:${C.reset} All ${maxRetries} attempts failed`);
+  console.log(`${C.yellow}Continuing without MongoDB...${C.reset}`);
 }
 
 async function main() {
