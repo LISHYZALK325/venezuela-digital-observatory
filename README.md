@@ -90,9 +90,58 @@ This project started with domain WHOIS data and now includes availability monito
 
 ---
 
+## Self-hosting
+
+### Quick Start
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ggangix/venezuela-digital-observatory
+   cd venezuela-digital-observatory
+   ```
+
+2. **Import data to MongoDB:**
+   ```bash
+   cd monitor
+   npm install
+   MONGO_URI=mongodb://localhost:27017/ve_monitor node import-to-mongo.js status.json
+   ```
+
+3. **Start the dashboard:**
+   ```bash
+   cd ../dashboard
+   npm install
+   npm run dev
+   ```
+
+4. **Open** http://localhost:3000
+
+### Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `MONGO_URI` | MongoDB connection string | `mongodb://localhost:27017/ve_monitor` |
+| `NEXT_PUBLIC_SITE_URL` | Public URL for meta tags | `https://venezueladigitalobservatory.com` |
+| `NEXT_PUBLIC_GA_ID` | Google Analytics ID (optional) | - |
+
+### Docker
+
+```bash
+# Build and run
+docker-compose up -d
+
+# Or build individually
+cd dashboard
+docker build -t ve-dashboard .
+docker run -p 3000:3000 -e MONGO_URI=mongodb://host:27017/ve_monitor ve-dashboard
+```
+
+---
+
 ## License
 
-**CC0 (Public Domain)** — Use it however you want.
+- **Code**: [MIT License](LICENSE)
+- **Data** (`data/`, `monitor/status.json`): [CC0 (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ---
 

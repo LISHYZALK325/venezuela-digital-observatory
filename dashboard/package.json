@@ -1,0 +1,60 @@
+{
+  "name": "ve-digital-observatory",
+  "version": "1.0.0",
+  "description": "Real-time monitoring dashboard for Venezuelan government websites (.gob.ve)",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\""
+  },
+  "dependencies": {
+    "next": "15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next-intl": "^3.22.0",
+    "mongodb": "^6.12.0",
+    "zod": "^3.22.4",
+    "recharts": "^2.12.0",
+    "lucide-react": "^0.417.0",
+    "@tanstack/react-table": "^8.11.0",
+    "react-icons": "^5.2.1",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "15.1.0",
+    "prettier": "^3.2.0",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.33",
+    "autoprefixer": "^10.4.17"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Giuseppe Gangi",
+    "url": "https://ggangi.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giuseppegangi/venezuela-digital-observatory"
+  },
+  "keywords": [
+    "venezuela",
+    "government",
+    "monitoring",
+    "transparency",
+    "open-data"
+  ]
+}

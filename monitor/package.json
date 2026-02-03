@@ -1,0 +1,9 @@
+{
+  "name": "ve-monitor",
+  "version": "1.0.0",
+  "description": "Venezuela Digital Observatory - Domain Status Monitor",
+  "main": "check-status.js",
+  "dependencies": {
+    "mongodb": "^6.3.0"
+  }
+}

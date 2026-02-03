@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "title": "Venezuela Digital Observatory",
+    "description": "Real-time monitoring of Venezuelan government websites (.gob.ve and .mil.ve). Track availability, SSL certificates, and server status.",
+    "keywords": "Venezuela, government, monitoring, transparency, open data, digital observatory"
+  },
+  "nav": {
+    "overview": "Overview",
+    "domains": "Domains",
+    "trends": "Trends",
+    "export": "Export"
+  },
+  "overview": {
+    "title": "Venezuela Digital Observatory",
+    "subtitle": "Real-time monitoring of Venezuelan government websites",
+    "lastUpdate": "Last update",
+    "viewAll": "View all domains"
+  },
+  "stats": {
+    "totalDomains": "Total Domains",
+    "online": "Online",
+    "offline": "Offline",
+    "withSSL": "With SSL",
+    "validSSL": "Valid SSL",
+    "expiringSoon": "Expiring Soon",
+    "avgResponseTime": "Avg. Response Time",
+    "checkDuration": "Check Duration"
+  },
+  "domains": {
+    "title": "All Domains",
+    "subtitle": "Browse and search all monitored Venezuelan government domains",
+    "search": "Search domains...",
+    "filters": {
+      "all": "All",
+      "online": "Online",
+      "offline": "Offline",
+      "sslValid": "Valid SSL",
+      "sslInvalid": "Invalid SSL",
+      "noSSL": "No SSL",
+      "http2xx": "2xx (Success)",
+      "http3xx": "3xx (Redirect)",
+      "http4xx": "4xx (Client Error)",
+      "http5xx": "5xx (Server Error)",
+      "httpError": "Connection Error"
+    },
+    "columns": {
+      "domain": "Domain",
+      "status": "Status",
+      "httpCode": "HTTP Code",
+      "responseTime": "Response Time",
+      "ssl": "SSL",
+      "server": "Server",
+      "organization": "Organization",
+      "lastCheck": "Last Check"
+    },
+    "noResults": "No domains found matching your criteria",
+    "loading": "Loading domains..."
+  },
+  "domain": {
+    "title": "Domain Details",
+    "backToList": "Back to list",
+    "sections": {
+      "status": "Current Status",
+      "ssl": "SSL Certificate",
+      "headers": "Server Headers",
+      "redirects": "Redirect Chain",
+      "history": "Check History",
+      "whois": "WHOIS Information"
+    },
+    "ssl": {
+      "enabled": "SSL Enabled",
+      "valid": "Certificate Valid",
+      "issuer": "Issuer",
+      "subject": "Subject",
+      "validFrom": "Valid From",
+      "validTo": "Valid To",
+      "daysRemaining": "Days Remaining",
+      "selfSigned": "Self-Signed",
+      "expired": "Expired",
+      "expiringSoon": "Expiring Soon"
+    },
+    "headers": {
+      "server": "Server",
+      "poweredBy": "Powered By",
+      "contentType": "Content Type",
+      "cacheControl": "Cache Control"
+    },
+    "whois": {
+      "registrar": "Registrar",
+      "registered": "Registered",
+      "expires": "Expires",
+      "organization": "Organization",
+      "nameservers": "Nameservers"
+    },
+    "notFound": "Domain not found"
+  },
+  "trends": {
+    "title": "Trends & Analytics",
+    "subtitle": "Historical data and performance trends",
+    "charts": {
+      "availability": "Availability Over Time",
+      "responseTime": "Average Response Time",
+      "sslExpiring": "SSL Certificates Expiring"
+    },
+    "insights": {
+      "title": "Key Insights",
+      "statusChanges": "Status Changes",
+      "slowestDomains": "Slowest Domains",
+      "expiringSSL": "SSL Expiring Soon"
+    },
+    "period": {
+      "7days": "Last 7 days",
+      "30days": "Last 30 days",
+      "90days": "Last 90 days"
+    }
+  },
+  "export": {
+    "title": "Export Data",
+    "subtitle": "Download the complete dataset in various formats",
+    "formats": {
+      "json": "JSON",
+      "csv": "CSV"
+    },
+    "options": {
+      "all": "All domains",
+      "online": "Online only",
+      "offline": "Offline only"
+    },
+    "download": "Download",
+    "license": "Data is released under CC0 (Public Domain)"
+  },
+  "footer": {
+    "madeBy": "Made by",
+    "openSource": "Open source project",
+    "viewOnGithub": "View on GitHub",
+    "buyMeCoffee": "Buy me a coffee",
+    "license": "Data: CC0 Public Domain",
+    "disclaimer": "This project is independent and not affiliated with any government entity."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No",
+    "ms": "ms",
+    "seconds": "seconds",
+    "online": "Online",
+    "offline": "Offline",
+    "unknown": "Unknown",
+    "notAvailable": "N/A"
+  },
+  "status": {
+    "online": "Online",
+    "offline": "Offline"
+  },
+  "ssl": {
+    "valid": "Valid",
+    "invalid": "Invalid",
+    "expired": "Expired",
+    "none": "None",
+    "selfSigned": "Self-signed"
+  },
+  "language": {
+    "en": "English",
+    "es": "Spanish",
+    "switch": "Switch language"
+  }
+}

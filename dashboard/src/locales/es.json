@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "title": "Observatorio Digital de Venezuela",
+    "description": "Monitoreo en tiempo real de sitios web del gobierno venezolano (.gob.ve y .mil.ve). Rastrea disponibilidad, certificados SSL y estado de servidores.",
+    "keywords": "Venezuela, gobierno, monitoreo, transparencia, datos abiertos, observatorio digital"
+  },
+  "nav": {
+    "overview": "Inicio",
+    "domains": "Dominios",
+    "trends": "Tendencias",
+    "export": "Exportar"
+  },
+  "overview": {
+    "title": "Observatorio Digital de Venezuela",
+    "subtitle": "Monitoreo en tiempo real de sitios web del gobierno venezolano",
+    "lastUpdate": "Última actualización",
+    "viewAll": "Ver todos los dominios"
+  },
+  "stats": {
+    "totalDomains": "Total Dominios",
+    "online": "En línea",
+    "offline": "Fuera de línea",
+    "withSSL": "Con SSL",
+    "validSSL": "SSL Válido",
+    "expiringSoon": "Por Expirar",
+    "avgResponseTime": "Tiempo Promedio",
+    "checkDuration": "Duración del Chequeo"
+  },
+  "domains": {
+    "title": "Todos los Dominios",
+    "subtitle": "Explora y busca todos los dominios del gobierno venezolano monitoreados",
+    "search": "Buscar dominios...",
+    "filters": {
+      "all": "Todos",
+      "online": "En línea",
+      "offline": "Fuera de línea",
+      "sslValid": "SSL Válido",
+      "sslInvalid": "SSL Inválido",
+      "noSSL": "Sin SSL",
+      "http2xx": "2xx (Éxito)",
+      "http3xx": "3xx (Redirección)",
+      "http4xx": "4xx (Error Cliente)",
+      "http5xx": "5xx (Error Servidor)",
+      "httpError": "Error de Conexión"
+    },
+    "columns": {
+      "domain": "Dominio",
+      "status": "Estado",
+      "httpCode": "Código HTTP",
+      "responseTime": "Tiempo de Respuesta",
+      "ssl": "SSL",
+      "server": "Servidor",
+      "organization": "Organización",
+      "lastCheck": "Último Chequeo"
+    },
+    "noResults": "No se encontraron dominios con los criterios seleccionados",
+    "loading": "Cargando dominios..."
+  },
+  "domain": {
+    "title": "Detalles del Dominio",
+    "backToList": "Volver a la lista",
+    "sections": {
+      "status": "Estado Actual",
+      "ssl": "Certificado SSL",
+      "headers": "Cabeceras del Servidor",
+      "redirects": "Cadena de Redirecciones",
+      "history": "Historial de Chequeos",
+      "whois": "Información WHOIS"
+    },
+    "ssl": {
+      "enabled": "SSL Habilitado",
+      "valid": "Certificado Válido",
+      "issuer": "Emisor",
+      "subject": "Sujeto",
+      "validFrom": "Válido Desde",
+      "validTo": "Válido Hasta",
+      "daysRemaining": "Días Restantes",
+      "selfSigned": "Auto-firmado",
+      "expired": "Expirado",
+      "expiringSoon": "Por Expirar"
+    },
+    "headers": {
+      "server": "Servidor",
+      "poweredBy": "Impulsado Por",
+      "contentType": "Tipo de Contenido",
+      "cacheControl": "Control de Caché"
+    },
+    "whois": {
+      "registrar": "Registrador",
+      "registered": "Registrado",
+      "expires": "Expira",
+      "organization": "Organización",
+      "nameservers": "Servidores DNS"
+    },
+    "notFound": "Dominio no encontrado"
+  },
+  "trends": {
+    "title": "Tendencias y Análisis",
+    "subtitle": "Datos históricos y tendencias de rendimiento",
+    "charts": {
+      "availability": "Disponibilidad en el Tiempo",
+      "responseTime": "Tiempo de Respuesta Promedio",
+      "sslExpiring": "Certificados SSL por Expirar"
+    },
+    "insights": {
+      "title": "Datos Clave",
+      "statusChanges": "Cambios de Estado",
+      "slowestDomains": "Dominios Más Lentos",
+      "expiringSSL": "SSL por Expirar"
+    },
+    "period": {
+      "7days": "Últimos 7 días",
+      "30days": "Últimos 30 días",
+      "90days": "Últimos 90 días"
+    }
+  },
+  "export": {
+    "title": "Exportar Datos",
+    "subtitle": "Descarga el conjunto de datos completo en varios formatos",
+    "formats": {
+      "json": "JSON",
+      "csv": "CSV"
+    },
+    "options": {
+      "all": "Todos los dominios",
+      "online": "Solo en línea",
+      "offline": "Solo fuera de línea"
+    },
+    "download": "Descargar",
+    "license": "Los datos se publican bajo CC0 (Dominio Público)"
+  },
+  "footer": {
+    "madeBy": "Creado por",
+    "openSource": "Proyecto de código abierto",
+    "viewOnGithub": "Ver en GitHub",
+    "buyMeCoffee": "Invítame un café",
+    "license": "Datos: CC0 Dominio Público",
+    "disclaimer": "Este proyecto es independiente y no está afiliado a ninguna entidad gubernamental."
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "retry": "Reintentar",
+    "close": "Cerrar",
+    "yes": "Sí",
+    "no": "No",
+    "ms": "ms",
+    "seconds": "segundos",
+    "online": "En línea",
+    "offline": "Fuera de línea",
+    "unknown": "Desconocido",
+    "notAvailable": "N/D"
+  },
+  "status": {
+    "online": "En línea",
+    "offline": "Fuera de línea"
+  },
+  "ssl": {
+    "valid": "Válido",
+    "invalid": "Inválido",
+    "expired": "Expirado",
+    "none": "Ninguno",
+    "selfSigned": "Auto-firmado"
+  },
+  "language": {
+    "en": "Inglés",
+    "es": "Español",
+    "switch": "Cambiar idioma"
+  }
+}

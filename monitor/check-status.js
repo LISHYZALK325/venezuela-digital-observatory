@@ -6,7 +6,7 @@ const path = require('path');
 
 const TIMEOUT_MS = 30000;
 const CONCURRENCY = 8;
-const MAX_REDIRECTS = 5;
+const MAX_REDIRECTS = 3;
 const RETRY_ATTEMPTS = 2;
 const DATA_FILE = process.env.DATA_FILE || path.join(__dirname, '../data/whois_gobve.json');
 const OUTPUT_FILE = process.env.OUTPUT_FILE || path.join(__dirname, 'status.json');

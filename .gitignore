@@ -16,5 +16,9 @@ Thumbs.db
 # Raw WHOIS files (not needed in repo, only processed data)
 whois_raw/
 
-# Process folder
+# Process folder (scripts for data processing)
 process/
+
+# Root level package files
+/node_modules/
+/package-lock.json
