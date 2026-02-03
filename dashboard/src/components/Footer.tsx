@@ -22,12 +22,12 @@ const socialLinks = [
   },
   {
     name: 'LinkedIn',
-    href: 'https://linkedin.com/in/giuseppegangi',
+    href: 'https://linkedin.com/in/giuseppe.gangi',
     icon: SiLinkedin,
   },
   {
     name: 'GitHub',
-    href: 'https://github.com/giuseppegangi',
+    href: 'https://github.com/ggangix',
     icon: SiGithub,
   },
 ];
@@ -88,7 +88,7 @@ export function Footer() {
           <p className="text-xs text-slate-500 dark:text-slate-400">
             {t('openSource')} •{' '}
             <a
-              href="https://github.com/giuseppegangi/venezuela-digital-observatory"
+              href="https://github.com/ggangix/venezuela-digital-observatory"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"

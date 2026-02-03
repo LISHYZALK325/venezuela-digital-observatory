@@ -33,7 +33,7 @@ Real-time monitoring dashboard for Venezuelan government websites (.gob.ve).
 
 ```bash
 # Clone the repository
-git clone https://github.com/giuseppegangi/venezuela-digital-observatory.git
+git clone https://github.com/ggangix/venezuela-digital-observatory.git
 
 # Navigate to dashboard directory
 cd venezuela-digital-observatory/dashboard
@@ -104,10 +104,11 @@ Code: MIT License
 
 [Giuseppe Gangi](https://ggangi.com)
 
-- Twitter: [@giuseppegangi](https://twitter.com/giuseppegangi)
-- GitHub: [@giuseppegangi](https://github.com/giuseppegangi)
+- Twitter: [@ggangix](https://twitter.com/ggangix)
+- Instagram: [@giuseppe.gangi](https://instagram.com/giuseppe.gangi)
+- GitHub: [@ggangix](https://github.com/ggangix)
 - LinkedIn: [giuseppegangi](https://linkedin.com/in/giuseppegangi)
 
 ## Support
 
-If you find this project useful, consider [buying me a coffee](https://buymeacoffee.com/giuseppegangi)!
+If you find this project useful, consider [buying me a coffee](https://buymeacoffee.com/giuseppe.gangi)!
