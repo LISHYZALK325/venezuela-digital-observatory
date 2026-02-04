@@ -61,6 +61,7 @@
     "backToList": "Back to list",
     "sections": {
       "status": "Current Status",
+      "reachability": "Reachability",
       "ssl": "SSL Certificate",
       "headers": "Server Headers",
       "redirects": "Redirect Chain",
@@ -84,6 +85,18 @@
       "poweredBy": "Powered By",
       "contentType": "Content Type",
       "cacheControl": "Cache Control"
+    },
+    "reachability": {
+      "dns": "DNS",
+      "tcp": "TCP",
+      "ips": "IPs",
+      "ok": "OK",
+      "fail": "Fail",
+      "port": "Port",
+      "skipped": "Skipped (DNS failed)",
+      "dnsError": "DNS Error",
+      "tcpError": "TCP Error",
+      "unavailable": "Reachability data not available"
     },
     "whois": {
       "registrar": "Registrar",

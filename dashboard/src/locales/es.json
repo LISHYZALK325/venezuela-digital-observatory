@@ -61,6 +61,7 @@
     "backToList": "Volver a la lista",
     "sections": {
       "status": "Estado Actual",
+      "reachability": "Conectividad",
       "ssl": "Certificado SSL",
       "headers": "Cabeceras del Servidor",
       "redirects": "Cadena de Redirecciones",
@@ -84,6 +85,18 @@
       "poweredBy": "Impulsado Por",
       "contentType": "Tipo de Contenido",
       "cacheControl": "Control de Caché"
+    },
+    "reachability": {
+      "dns": "DNS",
+      "tcp": "TCP",
+      "ips": "IPs",
+      "ok": "OK",
+      "fail": "Falla",
+      "port": "Puerto",
+      "skipped": "Omitido (fallo DNS)",
+      "dnsError": "Error DNS",
+      "tcpError": "Error TCP",
+      "unavailable": "Datos de conectividad no disponibles"
     },
     "whois": {
       "registrar": "Registrador",
