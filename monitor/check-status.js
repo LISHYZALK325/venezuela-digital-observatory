@@ -1,5 +1,7 @@
 const https = require('https');
 const http = require('http');
+const dns = require('dns').promises;
+const net = require('net');
 const fs = require('fs');
 const path = require('path');
 
@@ -35,6 +37,14 @@ const MONGO_URI = process.env.MONGO_URI;
 const MONGO_ENABLED = !!MONGO_URI;
 const FORCE_IPV4 = (process.env.FORCE_IPV4 || 'false').toLowerCase() === 'true';
 const SKIP_DNS_RETRIES = (process.env.SKIP_DNS_RETRIES || 'false').toLowerCase() === 'true';
+const REACHABILITY_ENABLED = (process.env.REACHABILITY_ENABLED || 'true').toLowerCase() === 'true';
+const DNS_TIMEOUT_MS = Math.max(0, parseInt(process.env.DNS_TIMEOUT_MS || '3000', 10));
+const TCP_TIMEOUT_MS = Math.max(0, parseInt(process.env.TCP_TIMEOUT_MS || '3000', 10));
+const TCP_PORTS_RAW = (process.env.TCP_PORTS || '443,80')
+  .split(',')
+  .map(value => parseInt(value.trim(), 10))
+  .filter(value => Number.isFinite(value) && value > 0);
+const TCP_PORTS = TCP_PORTS_RAW.length > 0 ? TCP_PORTS_RAW : [443, 80];
 const LOG_MODE_RAW = (process.env.LOG_MODE || 'progress').toLowerCase();
 const LOG_MODE = ['progress', 'stream', 'fail'].includes(LOG_MODE_RAW) ? LOG_MODE_RAW : 'progress';
 const LOG_CHECKPOINT_MS = Math.max(1000, parseInt(process.env.LOG_CHECKPOINT_MS || '30000', 10));
@@ -66,11 +76,145 @@ const httpAgent = new http.Agent({ keepAlive: KEEP_ALIVE, maxSockets: MAX_SOCKET
 const httpsAgent = new https.Agent({ keepAlive: KEEP_ALIVE, maxSockets: MAX_SOCKETS, maxFreeSockets: MAX_FREE_SOCKETS });
 
 // Errors worth retrying
-const DNS_ERRORS = ['EAI_AGAIN', 'ENOTFOUND'];
+const DNS_ERRORS = ['EAI_AGAIN', 'ENOTFOUND', 'DNS_TIMEOUT', 'DNS_FAIL', 'DNS_NO_RECORDS'];
 const RETRYABLE_ERRORS_BASE = ['TIMEOUT', 'ETIMEDOUT', 'ECONNRESET', 'ECONNREFUSED', ...DNS_ERRORS];
 const RETRYABLE_ERRORS = SKIP_DNS_RETRIES
   ? RETRYABLE_ERRORS_BASE.filter(error => !DNS_ERRORS.includes(error))
   : RETRYABLE_ERRORS_BASE;
+
+function withTimeout(promise, ms, timeoutCode) {
+  if (!ms || ms <= 0) return promise;
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => {
+      const err = new Error(timeoutCode);
+      err.code = timeoutCode;
+      reject(err);
+    }, ms);
+    promise
+      .then((value) => {
+        clearTimeout(timer);
+        resolve(value);
+      })
+      .catch((err) => {
+        clearTimeout(timer);
+        reject(err);
+      });
+  });
+}
+
+async function resolveDNS(domain) {
+  const start = Date.now();
+  const [v4Result, v6Result] = await Promise.allSettled([
+    withTimeout(dns.resolve4(domain), DNS_TIMEOUT_MS, 'DNS_TIMEOUT'),
+    withTimeout(dns.resolve6(domain), DNS_TIMEOUT_MS, 'DNS_TIMEOUT'),
+  ]);
+
+  const v4 = v4Result.status === 'fulfilled' ? v4Result.value : [];
+  const v6 = v6Result.status === 'fulfilled' ? v6Result.value : [];
+  const ips = [...v4, ...v6];
+
+  let error = null;
+  if (ips.length === 0) {
+    const err = v4Result.status === 'rejected'
+      ? v4Result.reason
+      : v6Result.status === 'rejected'
+        ? v6Result.reason
+        : null;
+    error = err?.code || err?.message || 'DNS_NO_RECORDS';
+  }
+
+  return {
+    ok: ips.length > 0,
+    v4,
+    v6,
+    ips,
+    error,
+    timeMs: Date.now() - start,
+  };
+}
+
+function pickTcpTarget(domain, dnsInfo) {
+  const v4 = dnsInfo?.v4 || [];
+  const v6 = dnsInfo?.v6 || [];
+  if (FORCE_IPV4 && v4.length > 0) {
+    return { host: v4[0], family: 4 };
+  }
+  if (v4.length > 0) {
+    return { host: v4[0], family: 4 };
+  }
+  if (v6.length > 0) {
+    return { host: v6[0], family: 6 };
+  }
+  return { host: domain, family: undefined };
+}
+
+function probeTcp(host, port, family) {
+  return new Promise((resolve) => {
+    const start = Date.now();
+    const socket = new net.Socket();
+    let settled = false;
+
+    const finish = (ok, error) => {
+      if (settled) return;
+      settled = true;
+      socket.destroy();
+      resolve({ ok, error: error || null, timeMs: Date.now() - start });
+    };
+
+    let timer = null;
+    if (TCP_TIMEOUT_MS > 0) {
+      timer = setTimeout(() => finish(false, 'TCP_TIMEOUT'), TCP_TIMEOUT_MS);
+    }
+
+    socket.once('connect', () => {
+      if (timer) clearTimeout(timer);
+      finish(true, null);
+    });
+
+    socket.once('error', (err) => {
+      if (timer) clearTimeout(timer);
+      finish(false, err?.code || err?.message || 'TCP_ERROR');
+    });
+
+    socket.connect({ host, port, family });
+  });
+}
+
+async function checkTcp(domain, dnsInfo) {
+  const target = pickTcpTarget(domain, dnsInfo);
+  let lastError = null;
+  let lastTime = null;
+  let lastPort = null;
+
+  for (const port of TCP_PORTS) {
+    lastPort = port;
+    const result = await probeTcp(target.host, port, target.family);
+    lastTime = result.timeMs;
+    if (result.ok) {
+      return { ok: true, port, timeMs: result.timeMs, error: null };
+    }
+    lastError = result.error;
+  }
+
+  return {
+    ok: false,
+    port: lastPort,
+    timeMs: lastTime,
+    error: lastError || 'TCP_FAIL',
+  };
+}
+
+async function getReachability(domain) {
+  if (!REACHABILITY_ENABLED) return null;
+  const dnsInfo = await resolveDNS(domain);
+  let tcpInfo = null;
+  if (!dnsInfo.ok) {
+    tcpInfo = { ok: false, port: null, timeMs: null, error: 'DNS_FAIL' };
+  } else {
+    tcpInfo = await checkTcp(domain, dnsInfo);
+  }
+  return { dns: dnsInfo, tcp: tcpInfo };
+}
 
 // Extract SSL certificate information from an HTTPS response socket
 function buildSSLInfo(socket, domain) {
@@ -229,10 +373,27 @@ async function checkDomain(domain, options = {}) {
   let result = null;
   let usedHttps = true;
   let sslInfo = null;
+  const reachability = options.reachability || null;
   const abortSignal = options.abortSignal;
 
   const primaryMethod = REQUEST_METHOD === 'HEAD' ? 'HEAD' : 'GET';
   const fallbackMethod = 'GET';
+
+  if (REACHABILITY_ENABLED && reachability?.dns?.ok === false) {
+    return {
+      domain,
+      status: 'offline',
+      httpCode: null,
+      responseTime: null,
+      ssl: null,
+      headers: null,
+      redirects: null,
+      finalUrl: null,
+      error: reachability.dns.error || 'DNS_FAIL',
+      checkedAt: new Date(),
+      reachability,
+    };
+  }
 
   // Follow redirects - Default to GET for compatibility
   for (let i = 0; i <= MAX_REDIRECTS; i++) {
@@ -290,6 +451,7 @@ async function checkDomain(domain, options = {}) {
       redirects: redirects.length > 0 ? redirects : null,
       finalUrl: redirects.length > 0 ? currentUrl : null,
       checkedAt,
+      reachability,
     };
   }
 
@@ -305,13 +467,21 @@ async function checkDomain(domain, options = {}) {
     finalUrl: null,
     error: result?.error || 'UNKNOWN',
     checkedAt,
+    reachability,
   };
 }
 
 // Check domain with retry logic
 async function checkDomainWithRetry(domain, options = {}) {
   const retries = Number.isFinite(options.retries) ? Math.max(0, options.retries) : RETRY_ATTEMPTS;
-  let result = await checkDomain(domain, options);
+  const reachability = options.reachability
+    ? options.reachability
+    : await getReachability(domain);
+  const checkOptions = {
+    abortSignal: options.abortSignal,
+    reachability,
+  };
+  let result = await checkDomain(domain, checkOptions);
 
   if (result?.error === 'SLOW_DEMOTE') {
     return result;
@@ -322,7 +492,7 @@ async function checkDomainWithRetry(domain, options = {}) {
     for (let attempt = 1; attempt <= retries; attempt++) {
       // Wait before retry (2s, 4s)
       await new Promise(r => setTimeout(r, attempt * 2000));
-      result = await checkDomain(domain, options);
+      result = await checkDomain(domain, checkOptions);
       if (result.status === 'online') break;
     }
   }
@@ -362,6 +532,12 @@ function formatMs(ms) {
   if (!Number.isFinite(ms)) return '-';
   if (ms >= 1000) return `${(ms / 1000).toFixed(1)}s`;
   return `${Math.round(ms)}ms`;
+}
+
+function percentile(sortedValues, p) {
+  if (!sortedValues.length) return null;
+  const index = Math.min(sortedValues.length - 1, Math.max(0, Math.ceil(p * sortedValues.length) - 1));
+  return sortedValues[index];
 }
 
 function makeProgressBar(pct, width = 10) {
@@ -795,7 +971,8 @@ async function saveToMongoDB(results, summary, checkDuration, maxRetries = 3) {
         ssl: r.ssl,
         headers: r.headers,
         redirects: r.redirects,
-        finalUrl: r.finalUrl
+        finalUrl: r.finalUrl,
+        reachability: r.reachability || null
       }));
 
       // Bulk insert domain records
@@ -855,6 +1032,10 @@ async function main() {
     SKIP_DNS_RETRIES ? 'DNS retries off' : 'DNS retries on'
   ].join(', ');
   console.log(`Behavior: ${behaviorText}`);
+  const reachabilityText = REACHABILITY_ENABLED
+    ? `Reachability: on (DNS ${DNS_TIMEOUT_MS}ms, TCP ${TCP_TIMEOUT_MS}ms, ports ${TCP_PORTS.join(',')})`
+    : 'Reachability: off';
+  console.log(reachabilityText);
   const logDetails = LOG_FILE ? `, file ${LOG_FILE}` : '';
   console.log(`Log mode: ${LOG_MODE}${logDetails}\n`);
   if (LOG_MODE !== 'progress') {
@@ -866,13 +1047,15 @@ async function main() {
 
   const startTime = Date.now();
   const results = await processWithConcurrency(domains, CONCURRENCY);
-  const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+  const elapsedSec = (Date.now() - startTime) / 1000;
+  const elapsed = elapsedSec.toFixed(1);
 
   // Stats
   const online = results.filter(r => r.status === 'online');
   const offline = results.filter(r => r.status === 'offline');
   const withSSL = online.filter(r => r.ssl?.enabled === true);
   const validSSL = online.filter(r => r.ssl?.valid === true);
+  const invalidSSL = withSSL.filter(r => r.ssl?.valid === false);
   const avgResponse = online.length > 0
     ? Math.round(online.reduce((sum, r) => sum + r.responseTime, 0) / online.length)
     : 0;
@@ -904,14 +1087,116 @@ async function main() {
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
 
+  const responseTimes = online
+    .map(r => r.responseTime)
+    .filter(value => Number.isFinite(value))
+    .sort((a, b) => a - b);
+  const p50 = percentile(responseTimes, 0.50);
+  const p90 = percentile(responseTimes, 0.90);
+  const p95 = percentile(responseTimes, 0.95);
+  const avgResponseText = online.length > 0 ? formatMs(avgResponse) : '-';
+  const p50Text = p50 !== null ? formatMs(p50) : '-';
+  const p90Text = p90 !== null ? formatMs(p90) : '-';
+  const p95Text = p95 !== null ? formatMs(p95) : '-';
+
+  const slowestDomains = online
+    .filter(r => Number.isFinite(r.responseTime))
+    .sort((a, b) => b.responseTime - a.responseTime)
+    .slice(0, 10);
+
+  const httpCodes = { '2xx': 0, '3xx': 0, '4xx': 0, '5xx': 0, error: 0 };
+  results.forEach((r) => {
+    const code = r.httpCode;
+    if (typeof code !== 'number' || code <= 0) {
+      httpCodes.error++;
+      return;
+    }
+    if (code >= 200 && code < 300) httpCodes['2xx']++;
+    else if (code >= 300 && code < 400) httpCodes['3xx']++;
+    else if (code >= 400 && code < 500) httpCodes['4xx']++;
+    else if (code >= 500 && code < 600) httpCodes['5xx']++;
+    else httpCodes.error++;
+  });
+
+  const errorBreakdown = { timeout: 0, dns: 0, reset: 0, refused: 0, other: 0 };
+  offline.forEach((r) => {
+    const err = r.error || 'UNKNOWN';
+    if (err === 'TIMEOUT' || err === 'ETIMEDOUT') errorBreakdown.timeout++;
+    else if (DNS_ERRORS.includes(err)) errorBreakdown.dns++;
+    else if (err === 'ECONNRESET') errorBreakdown.reset++;
+    else if (err === 'ECONNREFUSED') errorBreakdown.refused++;
+    else errorBreakdown.other++;
+  });
+
+  const redirectsWith = results.filter(r => Array.isArray(r.redirects) && r.redirects.length > 0);
+  const redirectTotal = redirectsWith.reduce((sum, r) => sum + r.redirects.length, 0);
+  const redirectAvg = redirectsWith.length > 0 ? (redirectTotal / redirectsWith.length).toFixed(1) : '0.0';
+  const redirectMax = redirectsWith.length > 0 ? Math.max(...redirectsWith.map(r => r.redirects.length)) : 0;
+
+  const selfSigned = online.filter(r => r.ssl?.selfSigned === true).length;
+  const expiringSoon = online.filter(r =>
+    Number.isFinite(r.ssl?.daysUntilExpiry) &&
+    r.ssl.daysUntilExpiry >= 0 &&
+    r.ssl.daysUntilExpiry <= 30
+  ).length;
+
+  const reachabilityResults = results.filter(r => r.reachability && r.reachability.dns);
+  const reachabilityCollected = reachabilityResults.length > 0;
+  const dnsOk = reachabilityResults.filter(r => r.reachability?.dns?.ok === true).length;
+  const dnsFail = reachabilityResults.filter(r => r.reachability?.dns?.ok === false).length;
+  const tcpOk = reachabilityResults.filter(r => r.reachability?.tcp?.ok === true).length;
+  const tcpFail = reachabilityResults.filter(r => r.reachability?.tcp?.ok === false).length;
+  const timeoutReachable = results.filter(r =>
+    r.status === 'offline' &&
+    (r.error === 'TIMEOUT' || r.error === 'ETIMEDOUT') &&
+    r.reachability?.dns?.ok === true &&
+    r.reachability?.tcp?.ok === true
+  ).length;
+
+  const throughput = elapsedSec > 0 ? (domains.length / elapsedSec) : 0;
+
   // Summary
   console.log('\n=== Summary ===\n');
-  console.log(`  ${C.green}Online:${C.reset}     ${online.length} (${Math.round(online.length/domains.length*100)}%)`);
-  console.log(`  ${C.red}Offline:${C.reset}    ${offline.length} (${Math.round(offline.length/domains.length*100)}%)`);
-  console.log(`  ${C.yellow}With SSL:${C.reset}   ${withSSL.length}`);
-  console.log(`  ${C.yellow}Valid SSL:${C.reset}  ${validSSL.length}`);
-  console.log(`  ${C.dim}Avg response:${C.reset} ${avgResponse}ms`);
-  console.log(`  ${C.dim}Duration:${C.reset} ${elapsed}s`);
+  console.log('Totals:');
+  console.log(`  Domains: ${domains.length}`);
+  console.log(`  ${C.green}Online:${C.reset}  ${online.length} (${Math.round((online.length / domains.length) * 100)}%)`);
+  console.log(`  ${C.red}Offline:${C.reset} ${offline.length} (${Math.round((offline.length / domains.length) * 100)}%)`);
+  console.log(`  ${C.yellow}With SSL:${C.reset}  ${withSSL.length}`);
+  console.log(`  ${C.yellow}Valid SSL:${C.reset} ${validSSL.length}`);
+
+  console.log('\nPerformance:');
+  console.log(`  Run time: ${formatDuration(elapsedSec * 1000)} (${elapsed}s)`);
+  console.log(`  Throughput: ${throughput.toFixed(2)} domains/s (${(throughput * 60).toFixed(1)}/min)`);
+  console.log(`  Response (online): avg ${avgResponseText} | p50 ${p50Text} | p90 ${p90Text} | p95 ${p95Text}`);
+
+  console.log('\nHTTP codes:');
+  console.log(`  2xx ${httpCodes['2xx']} | 3xx ${httpCodes['3xx']} | 4xx ${httpCodes['4xx']} | 5xx ${httpCodes['5xx']} | error ${httpCodes.error}`);
+
+  console.log('\nErrors (offline):');
+  console.log(`  timeout ${errorBreakdown.timeout} | dns ${errorBreakdown.dns} | reset ${errorBreakdown.reset} | refused ${errorBreakdown.refused} | other ${errorBreakdown.other}`);
+
+  console.log('\nRedirects:');
+  console.log(`  With redirects: ${redirectsWith.length} (${Math.round((redirectsWith.length / domains.length) * 100)}%) | avg chain ${redirectAvg} | max chain ${redirectMax}`);
+
+  console.log('\nSSL:');
+  console.log(`  Valid ${validSSL.length} | Invalid ${invalidSSL.length} | Self-signed ${selfSigned} | Expiring <=30d ${expiringSoon}`);
+
+  if (reachabilityCollected) {
+    console.log('\nReachability:');
+    console.log(`  DNS ok ${dnsOk} | DNS fail ${dnsFail}`);
+    console.log(`  TCP ok ${tcpOk} | TCP fail ${tcpFail}`);
+    console.log(`  HTTP timeout with TCP ok ${timeoutReachable}`);
+  } else {
+    console.log('\nReachability: not collected');
+  }
+
+  if (slowestDomains.length > 0) {
+    console.log('\nSlowest domains:');
+    slowestDomains.forEach((d, i) => {
+      console.log(`  ${i + 1}. ${d.domain} (${formatMs(d.responseTime)})`);
+    });
+  }
+
   console.log(`\n  Output: ${OUTPUT_FILE}\n`);
 }
 

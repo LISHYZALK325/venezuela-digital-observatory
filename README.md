@@ -134,7 +134,7 @@ Environment variables for `monitor/check-status.js`:
 | `OUTPUT_FILE` | `monitor/status.json` | Output status JSON. |
 | `MONGO_URI` | - | Enables MongoDB writes when set. |
 | `TIMEOUT_MS` | `30000` | Lower is faster, higher is more accurate for slow sites. |
-| `CONCURRENCY` | `50` | Higher is faster but can increase timeouts. |
+| `CONCURRENCY` | `100` | Higher is faster but can increase timeouts. |
 | `MAX_CONCURRENCY` | auto | Max lanes during slow-ramp; higher is faster but riskier. |
 | `MAX_REDIRECTS` | `3` | Higher can improve accuracy for redirect-heavy sites. |
 | `RETRY_ATTEMPTS` | `2` | Lower is faster, higher can reduce false negatives. |
@@ -153,6 +153,10 @@ Environment variables for `monitor/check-status.js`:
 | `SLOW_RAMP_MIN_COMPLETIONS` | `5` | Minimum completions before evaluating ramp. |
 | `FORCE_IPV4` | `false` | `true` skips IPv6; often faster on Linux. |
 | `SKIP_DNS_RETRIES` | `false` | `true` skips retries for DNS errors; faster but less tolerant of flaky DNS. |
+| `REACHABILITY_ENABLED` | `true` | Collect DNS + TCP reachability signals. |
+| `DNS_TIMEOUT_MS` | `3000` | DNS lookup timeout for reachability. |
+| `TCP_TIMEOUT_MS` | `3000` | TCP connect timeout for reachability. |
+| `TCP_PORTS` | `443,80` | TCP ports to probe, in order. |
 | `LOG_MODE` | `progress` | `progress` shows the spinner only, `stream` logs key events, `fail` logs only offline + demote events. |
 | `LOG_CHECKPOINT_MS` | `30000` | Checkpoint interval for `stream`/`fail` modes. |
 | `LOG_FILE` | - | Write JSONL events to a file (use with `stream`/`fail`). |
