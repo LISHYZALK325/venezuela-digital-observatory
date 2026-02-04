@@ -157,11 +157,11 @@ Environment variables for `monitor/check-status.js`:
 | `DNS_TIMEOUT_MS` | `5000` | DNS lookup timeout for reachability. |
 | `TCP_TIMEOUT_MS` | `5000` | TCP connect timeout for reachability. |
 | `TCP_PORTS` | `443,80` | TCP ports to probe, in order. |
-| `SECOND_PASS_ENABLED` | `false` | Recheck offline domains with longer timeouts. |
+| `SECOND_PASS_ENABLED` | `true` | Recheck offline domains with longer timeouts. |
 | `SECOND_PASS_TIMEOUT_MS` | `45000` | HTTP timeout for the second pass. |
-| `SECOND_PASS_DNS_TIMEOUT_MS` | `5000` | DNS timeout for the second pass. |
-| `SECOND_PASS_TCP_TIMEOUT_MS` | `5000` | TCP timeout for the second pass. |
-| `SECOND_PASS_CONCURRENCY` | `25` | Concurrency for the second pass. |
+| `SECOND_PASS_DNS_TIMEOUT_MS` | `8000` | DNS timeout for the second pass. |
+| `SECOND_PASS_TCP_TIMEOUT_MS` | `8000` | TCP timeout for the second pass. |
+| `SECOND_PASS_CONCURRENCY` | `15` | Concurrency for the second pass. |
 | `SECOND_PASS_RETRY_ATTEMPTS` | `2` | Retry count for the second pass. |
 | `LOG_MODE` | `progress` | `progress` shows the spinner only, `stream` logs key events, `fail` logs only offline + demote events. |
 | `LOG_CHECKPOINT_MS` | `30000` | Checkpoint interval for `stream`/`fail` modes. |

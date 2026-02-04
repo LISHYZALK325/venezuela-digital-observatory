@@ -45,11 +45,11 @@ const TCP_PORTS_RAW = (process.env.TCP_PORTS || '443,80')
   .map(value => parseInt(value.trim(), 10))
   .filter(value => Number.isFinite(value) && value > 0);
 const TCP_PORTS = TCP_PORTS_RAW.length > 0 ? TCP_PORTS_RAW : [443, 80];
-const SECOND_PASS_ENABLED = (process.env.SECOND_PASS_ENABLED || 'false').toLowerCase() === 'true';
-const SECOND_PASS_CONCURRENCY = Math.max(1, parseInt(process.env.SECOND_PASS_CONCURRENCY || '25', 10));
+const SECOND_PASS_ENABLED = (process.env.SECOND_PASS_ENABLED || 'true').toLowerCase() === 'true';
+const SECOND_PASS_CONCURRENCY = Math.max(1, parseInt(process.env.SECOND_PASS_CONCURRENCY || '15', 10));
 const SECOND_PASS_TIMEOUT_MS = Math.max(0, parseInt(process.env.SECOND_PASS_TIMEOUT_MS || '45000', 10));
-const SECOND_PASS_DNS_TIMEOUT_MS = Math.max(0, parseInt(process.env.SECOND_PASS_DNS_TIMEOUT_MS || String(DNS_TIMEOUT_MS), 10));
-const SECOND_PASS_TCP_TIMEOUT_MS = Math.max(0, parseInt(process.env.SECOND_PASS_TCP_TIMEOUT_MS || String(TCP_TIMEOUT_MS), 10));
+const SECOND_PASS_DNS_TIMEOUT_MS = Math.max(0, parseInt(process.env.SECOND_PASS_DNS_TIMEOUT_MS || '8000', 10));
+const SECOND_PASS_TCP_TIMEOUT_MS = Math.max(0, parseInt(process.env.SECOND_PASS_TCP_TIMEOUT_MS || '8000', 10));
 const SECOND_PASS_RETRY_ATTEMPTS = Math.max(0, parseInt(process.env.SECOND_PASS_RETRY_ATTEMPTS || String(RETRY_ATTEMPTS), 10));
 const LOG_MODE_RAW = (process.env.LOG_MODE || 'progress').toLowerCase();
 const LOG_MODE = ['progress', 'stream', 'fail'].includes(LOG_MODE_RAW) ? LOG_MODE_RAW : 'progress';
@@ -938,6 +938,39 @@ async function processSubsetWithConcurrency(items, concurrency, options) {
   let cursor = 0;
   let inFlight = 0;
   let done = 0;
+  const startTime = Date.now();
+  let spinIndex = 0;
+  const spinChars = ['|', '/', '-', '\\'];
+  let lastPct = 0;
+
+  const renderProgress = (force = false) => {
+    if (LOG_MODE !== 'progress') return;
+    const pct = total > 0 ? Math.round((done / total) * 100) : 100;
+    const now = Date.now();
+    const elapsed = now - startTime;
+    const rate = done > 0 ? elapsed / done : 0;
+    const etaMs = done > 0 ? rate * (total - done) : 0;
+    const eta = done > 0 ? formatDuration(etaMs) : '--';
+    const spinner = spinChars[spinIndex % spinChars.length];
+    spinIndex++;
+
+    const queued = total - cursor;
+    const waiting = queued + inFlight;
+
+    if (process.stdout.isTTY) {
+      process.stdout.write(
+        `\r[${spinner}] Second pass Active ${inFlight} Waiting ${waiting} Total ${total} | Completed ${done} | ETA ${eta} RT ${formatDuration(elapsed)}    `
+      );
+    } else if (force || pct >= lastPct + 5 || done === total) {
+      console.log(`[${spinner}] Second pass Active ${inFlight} Waiting ${waiting} Total ${total} | Completed ${done} | ETA ${eta} RT ${formatDuration(elapsed)}`);
+      lastPct = pct;
+    }
+  };
+
+  let progressTimer = null;
+  if (LOG_MODE === 'progress' && process.stdout.isTTY) {
+    progressTimer = setInterval(() => renderProgress(false), DISPLAY_INTERVAL_MS);
+  }
 
   return new Promise((resolve) => {
     const pump = () => {
@@ -953,7 +986,17 @@ async function processSubsetWithConcurrency(items, concurrency, options) {
           .finally(() => {
             inFlight--;
             done++;
+            if (LOG_MODE === 'progress') {
+              renderProgress();
+            }
             if (done >= total) {
+              if (progressTimer) clearInterval(progressTimer);
+              if (process.stdout.isTTY && LOG_MODE === 'progress') {
+                renderProgress(true);
+                console.log('');
+              } else if (LOG_MODE === 'progress') {
+                renderProgress(true);
+              }
               resolve(results.filter(Boolean));
               return;
             }
