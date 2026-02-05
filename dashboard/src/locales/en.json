@@ -110,11 +110,15 @@
     "loading": "Loading domains...",
     "resultsCount": "domains"
   },
+  "common": {
+    "loading": "Loading..."
+  },
   "domain": {
     "title": "Domain Details",
     "backToList": "Back to list",
     "sections": {
       "status": "Current Status",
+      "reachability": "Reachability",
       "ssl": "SSL Certificate",
       "headers": "Server Headers",
       "redirects": "Redirect Chain",
@@ -139,6 +143,18 @@
       "contentType": "Content Type",
       "cacheControl": "Cache Control"
     },
+    "reachability": {
+      "dns": "DNS",
+      "tcp": "TCP",
+      "ips": "IPs",
+      "ok": "OK",
+      "fail": "Fail",
+      "port": "Port",
+      "skipped": "Skipped (DNS failed)",
+      "dnsError": "DNS Error",
+      "tcpError": "TCP Error",
+      "unavailable": "Reachability data not available"
+    },
     "whois": {
       "registrar": "Registrar",
       "registered": "Registered",
@@ -154,6 +170,20 @@
       "date": "Date",
       "status": "Status",
       "time": "Response Time"
+    },
+    "common": {
+      "loading": "Loading...",
+      "error": "An error occurred",
+      "retry": "Retry",
+      "close": "Close",
+      "yes": "Yes",
+      "no": "No",
+      "ms": "ms",
+      "seconds": "seconds",
+      "online": "Online",
+      "offline": "Offline",
+      "unknown": "Unknown",
+      "notAvailable": "N/A"
     }
   },
   "trends": {
@@ -239,20 +269,6 @@
     "buyMeCoffee": "Buy me a coffee",
     "license": "Data: CC0 Public Domain",
     "disclaimer": "This project is independent and not affiliated with any government entity."
-  },
-  "common": {
-    "loading": "Loading...",
-    "error": "An error occurred",
-    "retry": "Retry",
-    "close": "Close",
-    "yes": "Yes",
-    "no": "No",
-    "ms": "ms",
-    "seconds": "seconds",
-    "online": "Online",
-    "offline": "Offline",
-    "unknown": "Unknown",
-    "notAvailable": "N/A"
   },
   "status": {
     "online": "Online",

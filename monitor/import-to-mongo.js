@@ -96,7 +96,8 @@ async function importToMongo(jsonPath) {
       ssl: d.ssl,
       headers: d.headers,
       redirects: d.redirects,
-      finalUrl: d.finalUrl
+      finalUrl: d.finalUrl,
+      reachability: d.reachability || null
     }));
 
     // Bulk insert

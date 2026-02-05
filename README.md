@@ -124,6 +124,61 @@ This project started with domain WHOIS data and now includes availability monito
 | `NEXT_PUBLIC_SITE_URL` | Public URL for meta tags | `https://venezueladigitalobservatory.com` |
 | `NEXT_PUBLIC_GA_ID` | Google Analytics ID (optional) | - |
 
+### Monitor Configuration
+
+Environment variables for `monitor/check-status.js`:
+
+| Variable | Default | Notes |
+|----------|---------|-------|
+| `DATA_FILE` | `../data/whois_gobve.json` | Input domains list. |
+| `OUTPUT_FILE` | `monitor/status.json` | Output status JSON. |
+| `MONGO_URI` | - | Enables MongoDB writes when set. |
+| `TIMEOUT_MS` | `30000` | Lower is faster, higher is more accurate for slow sites. |
+| `CONCURRENCY` | `50` | Higher is faster but can increase timeouts. |
+| `MAX_CONCURRENCY` | auto | Max lanes during slow-ramp; higher is faster but riskier. |
+| `MAX_REDIRECTS` | `3` | Higher can improve accuracy for redirect-heavy sites. |
+| `RETRY_ATTEMPTS` | `2` | Lower is faster, higher can reduce false negatives. |
+| `REQUEST_METHOD` | `GET` | `HEAD` is faster but may be blocked; falls back to GET on 403/405/501. |
+| `KEEP_ALIVE` | `false` | `true` reduces handshake overhead; may stress servers. |
+| `MAX_BODY_BYTES` | `65536` | Limits body read for GET; lower is faster. |
+| `MAX_SOCKETS` | auto | Higher allows more parallel connections. |
+| `MAX_FREE_SOCKETS` | `32` | Keep-alive pool size. |
+| `FAST_TIMEOUT_MS` | `3000` | Fast-lane demotion threshold. Lower favors speed. |
+| `FAST_LANE_RATIO` | `0.2` | Share of fast-lane slots (0-0.9). |
+| `DISPLAY_INTERVAL_MS` | `3000` | Progress display interval. |
+| `SLOW_RAMP_STEP` | `10` | How quickly slow lanes scale up or down. |
+| `SLOW_RAMP_INTERVAL_MS` | `15000` | Ramp evaluation interval. |
+| `SLOW_RAMP_QUEUE_THRESHOLD` | `100` | Minimum queue before ramp logic activates. |
+| `SLOW_RAMP_MAX_TIMEOUT_PCT` | `0.1` | Timeout threshold before ramping down. |
+| `SLOW_RAMP_MIN_COMPLETIONS` | `5` | Minimum completions before evaluating ramp. |
+| `FORCE_IPV4` | `false` | `true` skips IPv6; often faster on Linux. |
+| `SKIP_DNS_RETRIES` | `false` | `true` skips retries for DNS errors; faster but less tolerant of flaky DNS. |
+| `REACHABILITY_ENABLED` | `true` | Collect DNS + TCP reachability signals. |
+| `DNS_TIMEOUT_MS` | `5000` | DNS lookup timeout for reachability. |
+| `TCP_TIMEOUT_MS` | `5000` | TCP connect timeout for reachability. |
+| `TCP_PORTS` | `443,80` | TCP ports to probe, in order. |
+| `SECOND_PASS_ENABLED` | `true` | Recheck offline domains with longer timeouts. |
+| `SECOND_PASS_TIMEOUT_MS` | `45000` | HTTP timeout for the second pass. |
+| `SECOND_PASS_DNS_TIMEOUT_MS` | `8000` | DNS timeout for the second pass. |
+| `SECOND_PASS_TCP_TIMEOUT_MS` | `8000` | TCP timeout for the second pass. |
+| `SECOND_PASS_CONCURRENCY` | `15` | Concurrency for the second pass. |
+| `SECOND_PASS_RETRY_ATTEMPTS` | `2` | Retry count for the second pass. |
+| `LOG_MODE` | `progress` | `progress` shows the spinner only, `stream` logs key events, `fail` logs only offline + demote events. |
+| `LOG_CHECKPOINT_MS` | `30000` | Checkpoint interval for `stream`/`fail` modes. |
+| `LOG_FILE` | - | Write JSONL events to a file (use with `stream`/`fail`). |
+| `LOG_COLOR` | auto | `false` disables ANSI colors. |
+
+Speed vs accuracy tips:
+
+1. Speed: set `SKIP_DNS_RETRIES=true`.
+2. Speed: set `FORCE_IPV4=true`.
+3. Speed: set `UV_THREADPOOL_SIZE=64` or `128` to reduce DNS bottlenecks.
+4. Speed: increase `CONCURRENCY` or `MAX_CONCURRENCY`.
+5. Accuracy: increase `TIMEOUT_MS` or `RETRY_ATTEMPTS`.
+6. Accuracy: keep `REQUEST_METHOD=GET` (best compatibility).
+7. Debug: set `LOG_MODE=stream` for per-domain events, or `LOG_MODE=fail` to only log failures.
+8. Accuracy: enable `SECOND_PASS_ENABLED=true` to recheck offline domains with longer timeouts.
+
 ### Docker
 
 ```bash
