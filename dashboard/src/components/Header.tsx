@@ -12,6 +12,7 @@ const navItems = [
   { key: 'overview', href: '' },
   { key: 'domains', href: '/domains' },
   { key: 'trends', href: '/trends' },
+  { key: 'about', href: '/about' },
 ];
 
 export function Header() {
