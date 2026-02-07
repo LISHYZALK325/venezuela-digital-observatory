@@ -19,6 +19,10 @@
       "domain": {
         "title": "{domain} - Observatorio Digital de Venezuela",
         "description": "Detalles de monitoreo para {domain}: estado de disponibilidad, información de certificado SSL, tiempos de respuesta, cabeceras del servidor e historial de verificaciones."
+      },
+      "about": {
+        "title": "Acerca de - Observatorio Digital de Venezuela",
+        "description": "Conoce el proyecto Observatorio Digital de Venezuela: nuestra misión, qué monitoreamos y cómo puedes usar estos datos para la transparencia y participación ciudadana."
       }
     }
   },
@@ -26,6 +30,7 @@
     "overview": "Inicio",
     "domains": "Dominios",
     "trends": "Tendencias",
+    "about": "Acerca de",
     "export": "Exportar"
   },
   "overview": {
@@ -67,6 +72,46 @@
       "sslCerts": "Certificados SSL y su validez",
       "redirects": "Cadenas de redirección",
       "serverHeaders": "Cabeceras de servidor"
+    },
+    "viewAllTrends": "Ver todas las tendencias",
+    "learnMore": "Acerca de este proyecto",
+    "loading": "Cargando..."
+  },
+  "about": {
+    "title": "Acerca de este proyecto",
+    "subtitle": "Transparencia digital para una ciudadanía informada",
+    "backToHome": "Volver al inicio",
+    "mission": "En tiempos donde el acceso a la información pública es cada vez más difícil, creemos que monitorear la infraestructura digital del gobierno es un acto de transparencia ciudadana. Los sitios web gubernamentales son la puerta de entrada a servicios públicos, trámites y datos oficiales. Cuando estos sitios fallan o están inaccesibles, los ciudadanos pierden acceso a derechos fundamentales.",
+    "features": {
+      "monitoring": {
+        "title": "Monitoreo continuo",
+        "description": "Verificamos cada dominio periódicamente, registrando disponibilidad, tiempos de respuesta y estado de certificados SSL."
+      },
+      "openData": {
+        "title": "Datos abiertos",
+        "description": "Toda la información recopilada es de dominio público (CC0). Puedes descargar, analizar y reutilizar los datos libremente."
+      },
+      "forEveryone": {
+        "title": "Para todos",
+        "description": "Periodistas, investigadores, organizaciones de sociedad civil y ciudadanos pueden usar estos datos para análisis e informes."
+      },
+      "independent": {
+        "title": "Independiente",
+        "description": "Este proyecto no está afiliado a ningún partido político ni entidad gubernamental. Es una iniciativa ciudadana independiente."
+      }
+    },
+    "whatWeMonitor": "¿Qué monitoreamos?",
+    "monitorItems": {
+      "availability": "Disponibilidad (online/offline)",
+      "httpCodes": "Códigos de respuesta HTTP",
+      "responseTimes": "Tiempos de respuesta",
+      "sslCerts": "Certificados SSL y su validez",
+      "redirects": "Cadenas de redirección",
+      "serverHeaders": "Cabeceras de servidor"
+    },
+    "support": {
+      "title": "Apoya el proyecto",
+      "description": "Este es un proyecto de código abierto. Puedes contribuir reportando problemas, enviando código o apoyando los costos de infraestructura."
     }
   },
   "stats": {
@@ -205,6 +250,10 @@
       "statusChanges": "Cambios de Estado",
       "slowestDomains": "Dominios Más Lentos",
       "expiringSSL": "SSL por Expirar",
+      "expiredSSL": "SSL Recién Expirados",
+      "renewedSSL": "SSL Recién Renovados",
+      "inconsistentSSL": "SSL Inconsistentes",
+      "inconsistentSSLDesc": "Dominios que sirven diferentes certificados SSL entre chequeos (indica servidores o balanceadores mal configurados)",
       "recentlyRegistered": "Últimos Dominios Registrados",
       "recentlyRegisteredDesc": "Nuevos dominios gubernamentales registrados en los últimos 2 años"
     },
@@ -233,6 +282,8 @@
     "noData": "No hay datos disponibles",
     "noDataShort": "No hay datos",
     "noCertificates": "No hay certificados por expirar",
+    "noExpiredCertificates": "No hay certificados recién expirados",
+    "noRenewedCertificates": "No hay certificados recién renovados",
     "noRecentDomains": "No hay dominios registrados recientemente",
     "errorLoading": "Error al cargar los datos",
     "legend": {

@@ -29,8 +29,71 @@ export async function GET(request: NextRequest) {
     // Get domains with SSL expiring soon (from latest check)
     const latestCheck = checkResults[checkResults.length - 1];
     let expiringSSL: { domain: string; daysUntilExpiry: number }[] = [];
+    let expiredSSL: { domain: string; daysUntilExpiry: number }[] = [];
+    let renewedSSL: { domain: string; daysUntilExpiry: number }[] = [];
+    let inconsistentSSL: { domain: string; issue: string }[] = [];
+
+    // First, detect inconsistent SSL certificates (need this before expired to filter them out)
+    // These are domains where different servers serve different certificates
+    const inconsistentWithValidSSL = new Set<string>();
+
+    if (latestCheck && checkResults.length >= 3) {
+      const recentChecks = checkResults.slice(-5);
+      const checkIds = recentChecks.map(c => c._id);
+
+      const sslAcrossChecks = await domains
+        .aggregate([
+          {
+            $match: {
+              checkId: { $in: checkIds },
+              'ssl.enabled': true,
+              'ssl.subject': { $exists: true, $ne: null },
+            },
+          },
+          {
+            $group: {
+              _id: '$domain',
+              subjects: { $addToSet: '$ssl.subject' },
+              issuers: { $addToSet: '$ssl.issuer' },
+              validFromDates: { $addToSet: '$ssl.validFrom' },
+              // Consider "not expired" if daysUntilExpiry > 0 (even if ssl.valid is false due to untrusted CA)
+              hasNonExpiredCert: { $max: { $cond: [{ $gt: ['$ssl.daysUntilExpiry', 0] }, 1, 0] } },
+              checksCount: { $sum: 1 },
+            },
+          },
+          {
+            $match: {
+              checksCount: { $gte: 2 },
+              $or: [
+                { 'subjects.1': { $exists: true } },
+                { 'issuers.1': { $exists: true } },
+              ],
+            },
+          },
+          { $limit: 10 },
+        ])
+        .toArray();
+
+      inconsistentSSL = sslAcrossChecks.map((d) => {
+        let issue = '';
+        if (d.subjects.length > 1) {
+          issue = `${d.subjects.length} different certificates`;
+        } else if (d.issuers.length > 1) {
+          issue = `${d.issuers.length} different issuers`;
+        }
+        // Track domains that are inconsistent but have at least one non-expired cert
+        if (d.hasNonExpiredCert === 1) {
+          inconsistentWithValidSSL.add(d._id as string);
+        }
+        return {
+          domain: d._id as string,
+          issue,
+        };
+      });
+    }
 
     if (latestCheck) {
+      // SSL expiring soon (0 < days <= 30)
       const sslExpiring = await domains
         .find({
           checkId: latestCheck._id,
@@ -38,7 +101,7 @@ export async function GET(request: NextRequest) {
           'ssl.daysUntilExpiry': { $lte: 30, $gt: 0 },
         })
         .sort({ 'ssl.daysUntilExpiry': 1 })
-        .limit(20)
+        .limit(10)
         .project({
           _id: 0,
           domain: 1,
@@ -50,6 +113,78 @@ export async function GET(request: NextRequest) {
         domain: d.domain,
         daysUntilExpiry: d.ssl?.daysUntilExpiry || 0,
       }));
+
+      // SSL recently expired (days <= 0, expired in last 30 days)
+      // Exclude domains that have inconsistent SSL but at least one valid certificate
+      const sslExpired = await domains
+        .find({
+          checkId: latestCheck._id,
+          'ssl.enabled': true,
+          'ssl.daysUntilExpiry': { $lte: 0, $gte: -30 },
+        })
+        .sort({ 'ssl.daysUntilExpiry': -1 })
+        .limit(20) // Get more to filter
+        .project({
+          _id: 0,
+          domain: 1,
+          'ssl.daysUntilExpiry': 1,
+        })
+        .toArray();
+
+      expiredSSL = sslExpired
+        .filter((d) => !inconsistentWithValidSSL.has(d.domain)) // Exclude inconsistent with valid cert
+        .map((d) => ({
+          domain: d.domain,
+          daysUntilExpiry: d.ssl?.daysUntilExpiry || 0,
+        }))
+        .slice(0, 10);
+
+      // SSL recently renewed: find certificates issued in the last 14 days
+      // that previously had low days (were about to expire)
+      const fourteenDaysAgo = new Date();
+      fourteenDaysAgo.setDate(fourteenDaysAgo.getDate() - 14);
+
+      const recentlyIssuedSSL = await domains
+        .find({
+          checkId: latestCheck._id,
+          'ssl.valid': true,
+          'ssl.validFrom': { $gte: fourteenDaysAgo },
+        })
+        .project({
+          _id: 0,
+          domain: 1,
+          'ssl.daysUntilExpiry': 1,
+          'ssl.validFrom': 1,
+        })
+        .toArray();
+
+      const previousCheck = checkResults.length > 7 ? checkResults[checkResults.length - 8] : checkResults[0];
+
+      if (recentlyIssuedSSL.length > 0 && previousCheck && previousCheck._id.toString() !== latestCheck._id.toString()) {
+        const recentDomains = recentlyIssuedSSL.map(d => d.domain);
+
+        const previousLowSSL = await domains
+          .find({
+            checkId: previousCheck._id,
+            domain: { $in: recentDomains },
+            'ssl.daysUntilExpiry': { $lt: 30, $gte: -7 },
+          })
+          .project({
+            _id: 0,
+            domain: 1,
+          })
+          .toArray();
+
+        const renewedDomains = new Set(previousLowSSL.map(d => d.domain));
+
+        renewedSSL = recentlyIssuedSSL
+          .filter(d => renewedDomains.has(d.domain))
+          .map(d => ({
+            domain: d.domain,
+            daysUntilExpiry: d.ssl?.daysUntilExpiry || 0,
+          }))
+          .slice(0, 10);
+      }
     }
 
     // Get slowest domains from latest check
@@ -157,7 +292,7 @@ export async function GET(request: NextRequest) {
         registeredDate: { $gte: twoYearsAgo },
       })
       .sort({ registeredDate: -1 })
-      .limit(20)
+      .limit(10)
       .project({
         _id: 0,
         domain: 1,
@@ -199,6 +334,9 @@ export async function GET(request: NextRequest) {
       timeline,
       insights: {
         expiringSSL,
+        expiredSSL,
+        renewedSSL,
+        inconsistentSSL,
         slowestDomains,
         recentlyRegistered: recentlyRegistered.map((d) => ({
           domain: d.domain,

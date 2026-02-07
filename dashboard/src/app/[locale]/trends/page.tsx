@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { TrendingUp, Clock, Shield, Server, PieChart, Activity, Globe, CalendarPlus } from 'lucide-react';
+import { TrendingUp, Clock, Shield, ShieldCheck, ShieldX, ShieldAlert, Server, PieChart, Activity, Globe, CalendarPlus } from 'lucide-react';
 import {
   AreaChart,
   Area,
@@ -34,6 +34,9 @@ type TrendData = {
   }[];
   insights: {
     expiringSSL: { domain: string; daysUntilExpiry: number }[];
+    expiredSSL: { domain: string; daysUntilExpiry: number }[];
+    renewedSSL: { domain: string; daysUntilExpiry: number }[];
+    inconsistentSSL: { domain: string; issue: string }[];
     slowestDomains: { domain: string; responseTime: number }[];
     recentlyRegistered: { domain: string; registeredDate: string; org: string }[];
   };
@@ -183,9 +186,10 @@ export default function TrendsPage() {
                     <YAxis tick={{ fontSize: 12 }} tickLine={false} axisLine={false} />
                     <Tooltip
                       contentStyle={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                        backgroundColor: 'var(--color-background)',
                         borderRadius: '8px',
-                        border: '1px solid #e2e8f0',
+                        border: '1px solid var(--color-border)',
+                        color: 'var(--color-foreground)',
                       }}
                       formatter={(value: number, name: string) => [
                         value,
@@ -245,9 +249,10 @@ export default function TrendsPage() {
                     />
                     <Tooltip
                       contentStyle={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                        backgroundColor: 'var(--color-background)',
                         borderRadius: '8px',
-                        border: '1px solid #e2e8f0',
+                        border: '1px solid var(--color-border)',
+                        color: 'var(--color-foreground)',
                       }}
                       formatter={(value: number) => [`${value}s`, t('legend.avgResponse')]}
                     />
@@ -375,9 +380,10 @@ export default function TrendsPage() {
                       formatter={(value: number) => [value, t('legend.domains')]}
                       labelFormatter={(label, payload) => payload?.[0]?.payload?.fullName || label}
                       contentStyle={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                        backgroundColor: 'var(--color-background)',
                         borderRadius: '8px',
-                        border: '1px solid #e2e8f0',
+                        border: '1px solid var(--color-border)',
+                        color: 'var(--color-foreground)',
                       }}
                     />
                     <Bar dataKey="count" fill="#06b6d4" radius={[0, 4, 4, 0]} />
@@ -426,7 +432,7 @@ export default function TrendsPage() {
             {/* Expiring SSL */}
             <div className="card">
               <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold">
-                <Shield className="h-5 w-5 text-red-600" />
+                <Shield className="h-5 w-5 text-amber-600" />
                 {t('insights.expiringSSL')}
               </h2>
               {data.insights.expiringSSL.length > 0 ? (
@@ -456,6 +462,89 @@ export default function TrendsPage() {
               )}
             </div>
           </div>
+
+          {/* SSL Status Row - Expired and Renewed */}
+          <div className="grid gap-6 lg:grid-cols-2">
+            {/* Expired SSL */}
+            <div className="card">
+              <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold">
+                <ShieldX className="h-5 w-5 text-red-600" />
+                {t('insights.expiredSSL')}
+              </h2>
+              {data.insights.expiredSSL && data.insights.expiredSSL.length > 0 ? (
+                <ol className="space-y-2">
+                  {data.insights.expiredSSL.map((d) => (
+                    <li key={d.domain} className="flex items-center justify-between gap-2 rounded-lg bg-slate-50 px-3 py-2 dark:bg-slate-800">
+                      <a
+                        href={`/${locale}/domain/${encodeURIComponent(d.domain)}`}
+                        className="font-mono text-sm hover:text-primary hover:underline"
+                      >
+                        {d.domain}
+                      </a>
+                      <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700 dark:bg-red-900/30 dark:text-red-400">
+                        {Math.abs(d.daysUntilExpiry)} {t('table.days')}
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              ) : (
+                <p className="text-muted-foreground py-4 text-center">{t('noExpiredCertificates')}</p>
+              )}
+            </div>
+
+            {/* Renewed SSL */}
+            <div className="card">
+              <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold">
+                <ShieldCheck className="h-5 w-5 text-green-600" />
+                {t('insights.renewedSSL')}
+              </h2>
+              {data.insights.renewedSSL && data.insights.renewedSSL.length > 0 ? (
+                <ol className="space-y-2">
+                  {data.insights.renewedSSL.map((d) => (
+                    <li key={d.domain} className="flex items-center justify-between gap-2 rounded-lg bg-slate-50 px-3 py-2 dark:bg-slate-800">
+                      <a
+                        href={`/${locale}/domain/${encodeURIComponent(d.domain)}`}
+                        className="font-mono text-sm hover:text-primary hover:underline"
+                      >
+                        {d.domain}
+                      </a>
+                      <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                        {d.daysUntilExpiry} {t('table.days')}
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              ) : (
+                <p className="text-muted-foreground py-4 text-center">{t('noRenewedCertificates')}</p>
+              )}
+            </div>
+          </div>
+
+          {/* Inconsistent SSL - servers with different certificates */}
+          {data.insights.inconsistentSSL && data.insights.inconsistentSSL.length > 0 && (
+            <div className="card mb-4">
+              <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold">
+                <ShieldAlert className="h-5 w-5 text-orange-600" />
+                {t('insights.inconsistentSSL')}
+              </h2>
+              <p className="mb-4 text-sm text-muted-foreground">{t('insights.inconsistentSSLDesc')}</p>
+              <ol className="space-y-2">
+                {data.insights.inconsistentSSL.map((d) => (
+                  <li key={d.domain} className="flex items-center justify-between gap-2 rounded-lg bg-slate-50 px-3 py-2 dark:bg-slate-800">
+                    <a
+                      href={`/${locale}/domain/${encodeURIComponent(d.domain)}`}
+                      className="font-mono text-sm hover:text-primary hover:underline"
+                    >
+                      {d.domain}
+                    </a>
+                    <span className="rounded-full bg-orange-100 px-2 py-0.5 text-xs font-medium text-orange-700 dark:bg-orange-900/30 dark:text-orange-400">
+                      {d.issue}
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
         </div>
       ) : (
         <div className="card py-12 text-center">

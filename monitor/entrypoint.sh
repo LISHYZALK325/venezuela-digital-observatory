@@ -9,8 +9,8 @@ echo "Current IP:"
 wget -qO- https://ipinfo.io/ip || echo "Could not get IP"
 echo ""
 
-# Run check every 6 hours (21600 seconds)
-INTERVAL=${CHECK_INTERVAL:-21600}
+# Run every 6 hours (21600 seconds)
+INTERVAL=21600
 
 while true; do
   echo "=========================================="

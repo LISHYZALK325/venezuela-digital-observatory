@@ -19,6 +19,10 @@
       "domain": {
         "title": "{domain} - Venezuela Digital Observatory",
         "description": "Monitoring details for {domain}: availability status, SSL certificate info, response times, server headers, and check history."
+      },
+      "about": {
+        "title": "About - Venezuela Digital Observatory",
+        "description": "Learn about the Venezuela Digital Observatory project: our mission, what we monitor, and how you can use this data for transparency and civic engagement."
       }
     }
   },
@@ -26,6 +30,7 @@
     "overview": "Overview",
     "domains": "Domains",
     "trends": "Trends",
+    "about": "About",
     "export": "Export"
   },
   "overview": {
@@ -67,6 +72,46 @@
       "sslCerts": "SSL certificates and validity",
       "redirects": "Redirect chains",
       "serverHeaders": "Server headers"
+    },
+    "viewAllTrends": "View all trends",
+    "learnMore": "About this project",
+    "loading": "Loading..."
+  },
+  "about": {
+    "title": "About this project",
+    "subtitle": "Digital transparency for an informed citizenry",
+    "backToHome": "Back to home",
+    "mission": "In times where access to public information is increasingly difficult, we believe that monitoring the government's digital infrastructure is an act of civic transparency. Government websites are the gateway to public services, procedures, and official data. When these sites fail or become inaccessible, citizens lose access to fundamental rights.",
+    "features": {
+      "monitoring": {
+        "title": "Continuous monitoring",
+        "description": "We check each domain periodically, recording availability, response times, and SSL certificate status."
+      },
+      "openData": {
+        "title": "Open data",
+        "description": "All collected information is public domain (CC0). You can download, analyze, and reuse the data freely."
+      },
+      "forEveryone": {
+        "title": "For everyone",
+        "description": "Journalists, researchers, civil society organizations, and citizens can use this data for analysis and reporting."
+      },
+      "independent": {
+        "title": "Independent",
+        "description": "This project is not affiliated with any political party or government entity. It is an independent civic initiative."
+      }
+    },
+    "whatWeMonitor": "What do we monitor?",
+    "monitorItems": {
+      "availability": "Availability (online/offline)",
+      "httpCodes": "HTTP response codes",
+      "responseTimes": "Response times",
+      "sslCerts": "SSL certificates and validity",
+      "redirects": "Redirect chains",
+      "serverHeaders": "Server headers"
+    },
+    "support": {
+      "title": "Support the project",
+      "description": "This is an open source project. You can contribute by reporting issues, submitting code, or supporting the infrastructure costs."
     }
   },
   "stats": {
@@ -205,6 +250,10 @@
       "statusChanges": "Status Changes",
       "slowestDomains": "Slowest Domains",
       "expiringSSL": "SSL Expiring Soon",
+      "expiredSSL": "Recently Expired SSL",
+      "renewedSSL": "Recently Renewed SSL",
+      "inconsistentSSL": "Inconsistent SSL Certificates",
+      "inconsistentSSLDesc": "Domains serving different SSL certificates across checks (indicates misconfigured servers or load balancers)",
       "recentlyRegistered": "Recently Registered Domains",
       "recentlyRegisteredDesc": "New government domains registered in the last 2 years"
     },
@@ -233,6 +282,8 @@
     "noData": "No data available",
     "noDataShort": "No data",
     "noCertificates": "No certificates expiring soon",
+    "noExpiredCertificates": "No recently expired certificates",
+    "noRenewedCertificates": "No recently renewed certificates",
     "noRecentDomains": "No recently registered domains",
     "errorLoading": "Failed to load trends data",
     "legend": {
